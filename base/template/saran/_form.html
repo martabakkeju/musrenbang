@@ -1,0 +1,53 @@
+{{form.errors}}
+<div class="form-body">
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="text" class="form-control" id="form_control_1" name="{{form.nama_lengkap.name}}" value="{{saran.nama_lengkap}}">
+        <label for="form_control_1">Nama Lengkap</label>
+        <span class="help-block">Nama Lengkap</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="email" class="form-control" id="form_control_1" name="{{form.email.name}}" value="{{saran.email}}">
+        <label for="form_control_1">Email</label>
+        <span class="help-block">Email</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="number" class="form-control" id="form_control_1" name="{{form.telp.name}}" value="{{saran.telp}}">
+        <label for="form_control_1">Telp</label>
+        <span class="help-block">Nomor Telepon / Handphone</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="number" class="form-control" id="form_control_1" name="{{form.no_ktp.name}}" value="{{saran.no_ktp}}" min="16" max="16">
+        <label for="form_control_1">No. KTP</label>
+        <span class="help-block">Nomor KTP</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="text" class="form-control" id="form_control_1" name="{{form.judul.name}}" value="{{saran.judul}}">
+        <label for="form_control_1">Judul</label>
+        <span class="help-block">Judul Saran</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <textarea class="form-control" id="input{{ form.pesan.name }}" name="{{ form.pesan.name }}" rows="3">{{saran.pesan}}</textarea>
+        <label for="form_control_1">Pesan</label>
+        <span class="help-block">Pesan</span>
+    </div>
+</div>
+
+<div class="form-actions">
+    <div class="row">
+        <div class="col-md-12">
+            <button type='submit' class="btn dark">Submit</button>
+            <a href="{{request.META.HTTP_REFERER}}" class="btn default">Cancel</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,74 @@
+<div class="form-body">
+    
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="text" class="form-control" id="form_control_1" name="{{form.name.name}}" value="{{rw.name}}">
+        <label for="form_control_1">Nama</label>
+        <span class="help-block">Nama</span>
+    </div>
+    
+    <div class="form-group form-md-line-input has-success">
+        <script type="text/javascript">
+
+            jQuery(document).ready(function($)
+            {
+                $("#input{{form.kelurahan.name}}").select2({
+                    minimumInputLength: 1,
+                    {% if not request.path == '/rw/add/' %}
+                    initSelection: function(element, callback){
+                        jQuery.ajax("/service/kelurahan", {
+                            data:{
+                                limit: -1,
+                                q: {{ form.kelurahan.value }},
+                                fields:['id']
+                            },
+                            dataType: "json"
+                            }).done(function(data) { 
+                                callback(data.items[0]);
+                            }
+                        );
+                    },
+                    {% endif %}
+                    ajax: {
+                        url: "/service/kelurahan/",
+                        dataType: 'json',
+                        quietMillis: 100,
+                        data: function(term, page) {
+                            return {
+                                limit: -1,
+                                q: term,
+
+                            };
+                        },
+                        results: function(data, page ) {
+                            return { results: data.items }
+                        }
+                    },
+                    formatResult: function(data) { 
+                        return "<div class='select2-user-result'>" + data.name + "</div>"; 
+                    },
+                    formatSelection: function(data) { 
+                        return  data.name; 
+                    }
+                    
+                });
+            });
+        </script>
+        <input type="text" class="form-control"  name="{{form.kelurahan.name}}" id="input{{form.kelurahan.name}}" {% if rw.kelurahan %} value="{{form.kelurahan.value}}" {% endif %}>
+        <label for="form_control_1">Kelurahan</label>
+    </div>
+
+</div>
+<div class="form-actions">
+    <div class="row">
+        <div class="col-md-12">
+            <button type="submit" class="btn dark">Submit</button>
+            <!-- <a href="javascript:;" class="btn dark">Submit</a> -->
+            <a href="{{request.META.HTTP_REFERER}}" class="btn default">Cancel</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+

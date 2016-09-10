@@ -1,0 +1,54 @@
+<!-- BEGIN EXAMPLE TABLE PORTLET-->
+<div class="portlet light bordered">
+	<div class="portlet-title"> 
+		{% if request.user.groups.all.0.name == 'pippk' %}
+		<a href="{% url 'PippkAdd' %}" class="btn btn-circle blue" style="float: right;">Tambah</a>	
+		{% endif %}
+		<div class="caption font-dark">
+			<i class="icon-settings font-dark"></i>
+			<span class="caption-subject bold uppercase">Tabel Pippk</span><br/><br/>
+			
+		</div>
+
+		<div class="tools"> </div>
+	</div>
+
+	<div class="portlet-body">
+		<table class="table table-striped table-bordered " id="sample_3">
+			<thead>
+				<tr>
+					<th> Kegiatan </th>
+					<th> Sasaran </th>
+					<th> Volume </th>
+					<th> Usulan Pagu </th>
+					<th> Status </th>
+					<th> alasan </th>
+					<th width="190 px" class="dontprint"> Actions </th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for i in object_list %}
+				<tr>
+					<td> {{i.kegiatan}} </td>
+					<td> {{i.sasaran}}</td>
+					<td> {{i.volume}} </td>
+					<td> {{i.usulan}}</td>
+					<td> {{i.status}} </td>
+					<td> {{i.alasan |default_if_none:"-"}} </td>
+					<td class="dontprint">
+						{% if request.user.groups.all.0.name == 'pippk' or request.user.is_superuser %}
+						{% if i.status == 'belum di akomodir' %}
+						<a href="{% url 'PippkUpdate' i.id %}" class="btn btn-circle green">Perbarui</a> 
+						<a href="{% url 'PippkDelete' i.id %}" class="btn btn-circle red">Hapus</a>
+						</br>
+						</br>
+						{% endif %}
+						{% endif %}
+						<a href="{% url 'PippkDetail' i.id %}" class="btn btn-circle yellow">Detail</a>
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>

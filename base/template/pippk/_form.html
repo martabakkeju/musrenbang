@@ -1,0 +1,116 @@
+
+<input type='hidden' name="kelurahan" id="id_kelurahan" value="{{request.user.detailuser.kelurahan}}"/>
+<div class="form-body">
+  
+<!--     <div class="form-group form-md-line-input form-md-floating-label has-successs">
+        <select class="form-control" name="{{form.tipe.name}}">
+            <option value=""></option>
+            <option value="kecamatan">RW</option>
+            <option value="kelurahan">LPM</option>
+            <option value="kecamatan">PKK</option>
+            <option value="kelurahan">KARANG TARUNA</option>
+        </select>
+        <label for="form_control_1">Tipe</label>
+        <span class="help-block">Tipe</span>
+    </div> -->
+
+    <div class="form-group form-md-line-input has-success">
+        
+    </div>
+    <div class="form-group form-md-line-input has-success">
+       {{form.urusan}}
+        <label for="form_control_1">Urusan </label>
+        <span class="help-block">Urusan</span>
+    </div>
+
+    <div class="form-group form-md-line-input has-success">
+        {{form.bidang}}
+        <label for="form_control_1">Bidang Urusan</label>
+    </div>
+
+    <div class="form-group form-md-line-input has-success">
+        {{form.prioritasdaerah}}
+        <label for="form_control_1">Prioritas Daerah</label>
+    </div>
+
+    <div class="form-group form-md-line-input has-success">
+        {{form.sasarandaerah}}
+        <label for="form_control_1">Sasaran Daerah</label>
+    </div>
+
+    <div class="form-group form-md-line-input has-success">
+        {{form.program}}
+        <label for="form_control_1">Program</label>
+        <span class="help-block">Program</span>
+    </div>
+
+    <div class="form-group form-md-line-input has-success">
+        {{form.kegiatan}}
+        <label for="form_control_1">Kegiatan</label>
+        <span class="help-block">Kegiatan</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="text" class="form-control" id="form_control_1" name="{{form.sasaran.name}}" value="{{pippk.sasaran}}">
+        <label for="form_control_1">Sasaran</label>
+        <span class="help-block">Sasaran</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="text" class="form-control" id="form_control_1" name="{{form.lokasi.name}}" value="{{pippk.lokasi}}">
+        <label for="form_control_1">Lokasi</label>
+        <span class="help-block">Lokasi</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="text" class="form-control" id="form_control_1" name="{{form.volume.name}}" value="{{pippk.volume}}">
+        <label for="form_control_1">Volume</label>
+        <span class="help-block">Volume</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="number" class="form-control" id="form_control_1" name="{{form.usulan.name}}" value="{{pippk.usulan}}">
+        <label for="form_control_1">Usulan Pagu</label>
+        <span class="help-block">Usulan Pagu</span>
+    </div>
+
+<!--     <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="text" class="form-control" id="currencyField">
+        <label for="form_control_1">Usulan Pagu</label>
+        <span class="help-block">Usulan Pagu</span>
+    </div> -->
+
+    {% if pippk.status == 'di tolak' %}
+        <div class="form-group form-md-line-input form-md-floating-label has-success">
+            <textarea class="form-control" id="input{{ form.alasan.name }}" name="{{ form.alasan.name }}" rows="3">{{pippk.alasan}}</textarea>
+            <label for="form_control_1">Alasan</label>
+            <span class="help-block">Alasan tidak dikordinir</span>
+        </div>
+    {% endif %}
+
+</div>
+
+<div class="form-actions">
+    <div class="row">
+        <div class="col-md-12">
+            <button type='submit' class="btn dark">Submit</button>
+            <a href="{{request.META.HTTP_REFERER}}" class="btn default">Cancel</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    
+    $(document).ready(function()
+    {
+        $('#currencyField').blur(function()
+        {
+            $('#currencyField').formatCurrency();
+        });
+    });
+</script>
+
+
+
+
+

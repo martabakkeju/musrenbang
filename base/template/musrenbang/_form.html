@@ -1,0 +1,120 @@
+
+<div class="form-body">
+<input type="hidden" name="tipe" value="{{request.user.detailuser.tipe}}" />
+  <!-- 
+    <div class="form-group form-md-line-input form-md-floating-label has-successs">
+        <select class="form-control" name="{{form.tipe.name}}">
+            <option value=""></option>
+            <option value="kecamatan">Kecamatan</option>
+            <option value="kelurahan">Kelurahan</option>
+        </select>
+        <label for="form_control_1">Tipe</label>
+        <span class="help-block">Tipe</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="text" class="form-control" id="form_control_1" name="{{form.kecamatan.name}}" value="Ciomas" disable>
+        <label for="form_control_1">Kecamatan</label>
+        <span class="help-block">Nama Kecamatan</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="text" class="form-control" id="form_control_1" name="{{form.kelurahan.name}}" value="Ciapus" disable>
+        <label for="form_control_1">Kelurahan</label>
+        <span class="help-block">Nama Kelurahan</span>
+    </div> -->
+    <div class="form-group form-md-line-input has-success">
+       {{form.urusan}}
+        <label for="form_control_1">Urusan</label>
+        <span class="help-block">Urusan</span>
+    </div>
+
+    <div class="form-group form-md-line-input has-success">
+        {{form.bidang}}
+        <label for="form_control_1">Bidang Urusan</label>
+    </div>
+
+    <div class="form-group form-md-line-input has-success">
+        {{form.prioritasdaerah}}
+        <label for="form_control_1">Prioritas Daerah</label>
+    </div>
+
+    <div class="form-group form-md-line-input has-success">
+        {{form.sasarandaerah}}
+        <label for="form_control_1">Sasaran Daerah</label>
+    </div>
+
+    <div class="form-group form-md-line-input has-success">
+        {{form.program}}
+        <label for="form_control_1">Program</label>
+        <span class="help-block">Program</span>
+    </div>
+
+    <div class="form-group form-md-line-input has-success">
+        {{form.kegiatan}}
+        <label for="form_control_1">Kegiatan</label>
+        <span class="help-block">Kegiatan</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="text" class="form-control" id="form_control_1" name="{{form.sasaran.name}}" value="{{musrenbang.sasaran}}">
+        <label for="form_control_1">Sasaran</label>
+        <span class="help-block">Sasaran</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="text" class="form-control" id="form_control_1" name="{{form.lokasi.name}}" value="{{musrenbang.lokasi}}">
+        <label for="form_control_1">Lokasi</label>
+        <span class="help-block">Lokasi</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="text" class="form-control" id="form_control_1" name="{{form.volume.name}}" value="{{musrenbang.volume}}">
+        <label for="form_control_1">Volume</label>
+        <span class="help-block">Volume</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="number" class="form-control" id="form_control_1" name="{{form.usulan.name}}" value="{{pippk.usulan}}">
+        <label for="form_control_1">Usulan Pagu</label>
+        <span class="help-block">Usulan Pagu</span>
+    </div>
+
+<!--     <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="text" class="form-control" id="currencyField">
+        <label for="form_control_1">Usulan Pagu</label>
+        <span class="help-block">Usulan Pagu</span>
+    </div> -->
+
+    <div class="form-group form-md-line-input has-success">
+        {{form.skpdtujuan}}
+        <label for="form_control_1">SKPD Tujuan</label>
+    </div>
+
+
+
+</div>
+<div class="form-actions">
+    <div class="row">
+        <div class="col-md-12">
+            <button type="submit" class="btn dark">Submit</button>
+            <!-- <a href="javascript:;" class="btn dark">Submit</a> -->
+            <a href="{{request.META.HTTP_REFERER}}" class="btn default">Cancel</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    
+    $(document).ready(function()
+    {
+        $('#currencyField').blur(function()
+        {
+            $('#currencyField').formatCurrency();
+        });
+    });
+</script>
+
+
+
+

@@ -1,0 +1,24 @@
+{{form.errors}}
+<div class="form-body">
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <textarea class="form-control" id="input{{ form.alasan.name }}" name="{{ form.alasan.name }}" rows="3">{{musrenbang.alasan}}</textarea>
+        <label for="form_control_1">Alasan</label>
+        <span class="help-block">Alasan tidak dikordinir</span>
+    </div>
+
+
+</div>
+<div class="form-actions">
+    <div class="row">
+        <div class="col-md-12">
+            <button type="submit" class="btn dark">Submit</button>
+            <!-- <a href="javascript:;" class="btn dark">Submit</a> -->
+            <a href="{{request.META.HTTP_REFERER}}" class="btn default">Cancel</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+

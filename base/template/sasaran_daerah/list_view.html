@@ -1,0 +1,35 @@
+<!-- BEGIN EXAMPLE TABLE PORTLET-->
+<div class="portlet light bordered">
+	<div class="portlet-title"> 
+		<a href="{% url 'SasaranDaerahAdd' %}" class="btn btn-circle blue" style="float: right;">Tambah</a>	
+		<div class="caption font-dark">
+			<i class="icon-settings font-dark"></i>
+			<span class="caption-subject bold uppercase">Tabel Sasaran Daerah</span><br/><br/>
+			
+		</div>
+
+		<div class="tools"> </div>
+	</div>
+
+	<div class="portlet-body">
+		<table class="table table-striped table-bordered " id="sample_3">
+			<thead>
+				<tr>
+					<th> Nama Sasaran Daerah </th>
+					<th width="190 px" class="dontprint"> Actions </th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for i in object_list %}
+				<tr>
+					<td>{{i.name}}</td>
+					<td class="dontprint">
+						<a href="{% url 'SasaranDaerahUpdate' i.id %}" class="btn btn-circle green">Perbarui</a> 
+						<a href="{% url 'SasaranDaerahDelete' i.id %}" class="btn btn-circle red">Hapus</a>
+					</td>
+				</tr>	
+				{% endfor %}						
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,224 @@
+<ul class="nav navbar-nav">
+	<li class="dropdown dropdown-fw">
+		<a href="javascript:;" class="text-uppercase">
+			<i class="icon-home"></i> Dashboard</a>
+		<ul class="dropdown-menu dropdown-menu-fw">
+			<li class="active">
+				<a href="{% url 'Dashboard' %}">
+					<i class="icon-bar-chart"></i> 2016 </a>
+			</li>
+		<!-- 	<li>
+				<a href="dashboard_2.html">
+					<i class="icon-bulb"></i> Dashboard 2 </a>
+			</li>
+			<li>
+				<a href="dashboard_3.html">
+					<i class="icon-graph"></i> Dashboard 3 </a>
+			</li> -->
+		</ul>
+	</li>
+	{% if user.is_authenticated %}
+	<li class="dropdown dropdown-fw  ">
+		<a href="javascript:;" class="text-uppercase">
+			<i class="fa fa-pencil-square-o">
+			{% if user.groups.all.0.name == 'musrenbang' %}
+			</i> Musrenbang</a>
+			{% elif user.groups.all.0.name == 'pippk' %}
+			</i> Musrenbang & PIPPK </a>
+			{% elif  user.is_superuser or user.groups.all.0.name == 'Admin' %}
+			</i> Musrenbang & PIPPK </a>
+			{% endif %}
+		<ul class="dropdown-menu dropdown-menu-fw">
+			{% if user.groups.all.0.name == 'musrenbang' %}
+			<li class="active">
+				<a href="{% url 'Musrenbang' %}">
+					<i class="fa fa-pencil"></i> Musrenbang</a>
+			</li>
+			{% elif user.groups.all.0.name == 'pippk' %}
+			<li class="active">
+				<a href="{% url 'Musrenbang' %}">
+					<i class="fa fa-pencil"></i> Musrenbang</a>
+			</li>
+			<li class="active">
+				<a href="{% url 'Pippk' %}">
+					<i class="fa fa-pencil"></i> PIPPK</a>
+			</li>
+			{% elif  user.is_superuser or user.groups.all.0.name == 'Admin' %}
+			
+			<li class="active">
+				<a href="{% url 'Musrenbang' %}">
+					<i class="fa fa-pencil"></i> Musrenbang</a>
+			</li>
+			<li class="active">
+				<a href="{% url 'Pippk' %}">
+					<i class="fa fa-pencil"></i> PIPPK</a>
+			</li>
+			{% endif %}
+
+
+			
+		</ul>
+	</li>
+	{% endif %}
+	<li class="dropdown dropdown-fw  ">
+		<a href="javascript:;" class="text-uppercase">
+			<i class="fa fa-comment"></i> Saran &amp; Masukan </a>
+		<ul class="dropdown-menu dropdown-menu-fw">
+			<li class="active">
+				<a href="{% url 'SaranAdd' %}">
+					<i class="fa fa-comments"></i>Saran &amp; Masukan</a>
+			</li>			
+		</ul>
+	</li>
+	<li class="dropdown dropdown-fw  ">
+		<a href="javascript:;" class="text-uppercase">
+			<i class="icon-info"></i> BERITA KEGIATAN </a>
+		<ul class="dropdown-menu dropdown-menu-fw">
+			<li class="active">
+				<a href="{% url 'InformasiMusrenbang' %}">
+					<i class="fa fa-info"></i>Musrenbang</a>
+			</li>
+			<li class="active">
+				<a href="{% url 'InformasiPippk' %}">
+					<i class="fa fa-info"></i>PIPPK </a>
+			</li>
+			
+		</ul>
+	</li>
+	<li class="dropdown dropdown-fw  ">
+		<a href="javascript:;" class="text-uppercase">
+			<i class="fa fa-book"></i> Laporan </a>
+		<ul class="dropdown-menu dropdown-menu-fw">
+			<li >
+				<a href="{% url 'ReportMusrenbang' %}">
+					<i class="fa fa-minus-square-o"></i> Musrenbang </a>
+			
+			</li>
+			<li >
+				<a href="{% url 'ReportPippk' %}">
+					<i class="fa fa-minus-square-o"></i>PIPPK</a>
+				
+			</li>
+			
+		</ul>
+	</li>
+	{% if user.is_superuser or user.groups.all.0.name == 'Admin' %}
+	<li class="dropdown dropdown-fw  ">
+		<a href="javascript:;" class="text-uppercase">
+			<i class="icon-settings"></i> Setting </a>
+		<ul class="dropdown-menu dropdown-menu-fw">
+
+			<li>
+				<a href="{% url 'DetailUser' %}">
+					<i class="fa fa-minus-square-o"></i>User</a>
+				
+			</li>
+
+
+			<li class="dropdown more-dropdown-sub">
+				<a href="javascript:;">
+					<i class="fa fa-minus-square-o"></i> Lokasi </a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="{% url 'Kecamatan' %}">
+							 Kecamatan 
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'Kelurahan' %}">
+							 Kelurahan 
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'Rw' %}">
+							 Rw
+						</a>
+					</li>
+
+					
+				</ul>
+			</li>
+			<li class="dropdown more-dropdown-sub">
+				<a href="javascript:;">
+					<i class="fa fa-minus-square-o"></i>Organisasi</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="{% url 'Lpm' %}">
+							<!-- <i class="icon-clock"></i> -->
+							 LPM 
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'Pkk' %}">
+							<!-- <i class="icon-clock"></i> -->
+							 PKK 
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'KarangTaruna' %}">
+							<!-- <i class="icon-clock"></i> -->
+							 Karang Taruna 
+						</a>
+					</li>
+					
+				</ul>
+			</li>
+			<li class="dropdown more-dropdown-sub">
+				<a href="javascript:;">
+					<i class="fa fa-minus-square-o"></i>Lain-Lain</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="{% url 'Urusan' %}">
+							<!-- <i class="icon-clock"></i> -->
+							 Urusan
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'Bidang' %}">
+							<!-- <i class="icon-clock"></i> -->
+							 Bidang 
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'Program' %}">
+							<!-- <i class="icon-clock"></i> -->
+							 Program
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'Kegiatan' %}">
+							<!-- <i class="icon-clock"></i> -->
+							 Kegiatan
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'PrioritasDaerah' %}">
+							<!-- <i class="icon-clock"></i> -->
+							 Prioritas Daerah
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'SasaranDaerah' %}">
+							<!-- <i class="icon-clock"></i> -->
+							 Sasaran Daerah
+						</a>
+					</li>
+					<li>
+						<a href="{% url 'SkpdTujuan' %}">
+							<!-- <i class="icon-clock"></i> -->
+							 Skpd Tujuan
+						</a>
+					</li>
+					
+				</ul>
+			</li>
+			<li>
+				<a href="{% url 'Agenda' %}">
+					<i class="fa fa-minus-square-o"></i>Agenda</a>
+			</li>
+			
+		</ul>
+	</li>
+	{% endif %}
+
+</ul>

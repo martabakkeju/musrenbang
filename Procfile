@@ -1,0 +1,1 @@
+web: gunicorn musrenbang.wsgi --log-file -

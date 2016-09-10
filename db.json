@@ -1,0 +1,3483 @@
+[
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "base",
+      "model": "kecamatan"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "base",
+      "model": "kelurahan"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "base",
+      "model": "rw"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "base",
+      "model": "lpm"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "base",
+      "model": "pkk"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "base",
+      "model": "karangtaruna"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "base",
+      "model": "urusan"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "base",
+      "model": "bidang"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "app_label": "base",
+      "model": "program"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+      "app_label": "base",
+      "model": "kegiatan"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+      "app_label": "base",
+      "model": "prioritasdaerah"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+      "app_label": "base",
+      "model": "sasarandaerah"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+      "app_label": "base",
+      "model": "skpdtujuan"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+      "app_label": "base",
+      "model": "musrenbang"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 21,
+    "fields": {
+      "app_label": "base",
+      "model": "pippk"
+    }
+  },
+  
+  {
+    "model": "sessions.session",
+    "pk": "4l0p4eiu7poft1e76wj5vnb3nex9lqhs",
+    "fields": {
+      "session_data": "MTcyNzI4ZDg2NmU2MDU2Y2FjMDA4NmZmYjUxOTI2NTc1OWUzODExODp7Il9hdXRoX3VzZXJfaGFzaCI6IjI3OWYwNTE4YjlmNjU0MzBmZGE2NjlkNzQzYmFiMDAzOThhNzVjZTYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+      "expire_date": "2016-07-11T10:55:46.198Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "4xoa88arnedsb1ynm34uj4ikqzseb6ri",
+    "fields": {
+      "session_data": "OTFjY2Y5MGY2ODVkNTI4YmE0ZTQwZGE4ZmI1ZmE1MzNjZmRjYjA4Zjp7Il9hdXRoX3VzZXJfaGFzaCI6IjZjZjU2MTZkYTYzMTU0OGI0MTNjZTg4ODI5ZjJkZjRmYmM5ZDY2YzkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI1In0=",
+      "expire_date": "2016-07-11T08:13:29.568Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "hdcphcjhj157po8gmdkktf68x3xevlvs",
+    "fields": {
+      "session_data": "MTcyNzI4ZDg2NmU2MDU2Y2FjMDA4NmZmYjUxOTI2NTc1OWUzODExODp7Il9hdXRoX3VzZXJfaGFzaCI6IjI3OWYwNTE4YjlmNjU0MzBmZGE2NjlkNzQzYmFiMDAzOThhNzVjZTYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+      "expire_date": "2016-07-10T22:35:11.757Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "qenijenthqsuuz6d9qoqcyhtigsclwvq",
+    "fields": {
+      "session_data": "MTcyNzI4ZDg2NmU2MDU2Y2FjMDA4NmZmYjUxOTI2NTc1OWUzODExODp7Il9hdXRoX3VzZXJfaGFzaCI6IjI3OWYwNTE4YjlmNjU0MzBmZGE2NjlkNzQzYmFiMDAzOThhNzVjZTYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+      "expire_date": "2016-07-11T09:21:32.193Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "sscu9chlths8o7eadkwep07huwmeunar",
+    "fields": {
+      "session_data": "NDJlNDY3Y2MxMjk4MDM4YWNhOGI4MzA2Nzg2ODVkMjI3NTcxZWVmNDp7Il9hdXRoX3VzZXJfaGFzaCI6ImMxNmMzNGU0NjJmM2YxOWUzOTcwMWM5MzNlMThhODc1MzViOWU4YTUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIzIn0=",
+      "expire_date": "2016-07-11T04:04:40.190Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "v6xs8xbwc7v91dv7qlzqw1jhn6nfguca",
+    "fields": {
+      "session_data": "MTcyNzI4ZDg2NmU2MDU2Y2FjMDA4NmZmYjUxOTI2NTc1OWUzODExODp7Il9hdXRoX3VzZXJfaGFzaCI6IjI3OWYwNTE4YjlmNjU0MzBmZGE2NjlkNzQzYmFiMDAzOThhNzVjZTYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+      "expire_date": "2016-07-11T14:27:25.804Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "z7x4pyj0qe427nd92i8cxzs8awki4d5h",
+    "fields": {
+      "session_data": "MTcyNzI4ZDg2NmU2MDU2Y2FjMDA4NmZmYjUxOTI2NTc1OWUzODExODp7Il9hdXRoX3VzZXJfaGFzaCI6IjI3OWYwNTE4YjlmNjU0MzBmZGE2NjlkNzQzYmFiMDAzOThhNzVjZTYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+      "expire_date": "2016-07-11T03:40:59.416Z"
+    }
+  },
+  {
+    "model": "base.kecamatan",
+    "pk": 1,
+    "fields": {
+      "name": "KECAMATAN BANDUNG WETAN"
+    }
+  },
+  {
+    "model": "base.kelurahan",
+    "pk": 1,
+    "fields": {
+      "name": "KELURAHAN CIHAPIT",
+      "kecamatan": 1
+    }
+  },
+  {
+    "model": "base.kelurahan",
+    "pk": 2,
+    "fields": {
+      "name": "KELURAHAN CITARUM",
+      "kecamatan": 1
+    }
+  },
+  {
+    "model": "base.kelurahan",
+    "pk": 3,
+    "fields": {
+      "name": "KELURAHAN TAMANSARI",
+      "kecamatan": 1
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 1,
+    "fields": {
+      "name": "RW 01",
+      "kelurahan": 1
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 2,
+    "fields": {
+      "name": "RW 02",
+      "kelurahan": 1
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 3,
+    "fields": {
+      "name": "RW 03",
+      "kelurahan": 1
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 4,
+    "fields": {
+      "name": "RW 04",
+      "kelurahan": 1
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 5,
+    "fields": {
+      "name": "RW 05",
+      "kelurahan": 1
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 6,
+    "fields": {
+      "name": "RW 06",
+      "kelurahan": 1
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 7,
+    "fields": {
+      "name": "RW 07",
+      "kelurahan": 1
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 8,
+    "fields": {
+      "name": "RW 08",
+      "kelurahan": 1
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 9,
+    "fields": {
+      "name": "RW  1",
+      "kelurahan": 2
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 10,
+    "fields": {
+      "name": "RW 2",
+      "kelurahan": 2
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 11,
+    "fields": {
+      "name": "RW 3",
+      "kelurahan": 2
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 12,
+    "fields": {
+      "name": "RW 4",
+      "kelurahan": 2
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 13,
+    "fields": {
+      "name": "RW 5",
+      "kelurahan": 2
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 14,
+    "fields": {
+      "name": "RW 6",
+      "kelurahan": 2
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 15,
+    "fields": {
+      "name": "RW 7",
+      "kelurahan": 2
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 16,
+    "fields": {
+      "name": "RW 8",
+      "kelurahan": 2
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 17,
+    "fields": {
+      "name": "RW 001",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 18,
+    "fields": {
+      "name": "RW 002",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 19,
+    "fields": {
+      "name": "RW 003",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 20,
+    "fields": {
+      "name": "RW 004",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 21,
+    "fields": {
+      "name": "RW 005",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 22,
+    "fields": {
+      "name": "RW 006",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 23,
+    "fields": {
+      "name": "RW 007",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 24,
+    "fields": {
+      "name": "RW 008",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 25,
+    "fields": {
+      "name": "RW 009",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 26,
+    "fields": {
+      "name": "RW 010",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 27,
+    "fields": {
+      "name": "RW 011",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 28,
+    "fields": {
+      "name": "RW 012",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 29,
+    "fields": {
+      "name": "RW 013",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 30,
+    "fields": {
+      "name": "RW 014",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 31,
+    "fields": {
+      "name": "RW 015",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 32,
+    "fields": {
+      "name": "RW 016",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 33,
+    "fields": {
+      "name": "RW 017",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 34,
+    "fields": {
+      "name": "RW 018",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 35,
+    "fields": {
+      "name": "RW 019",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 36,
+    "fields": {
+      "name": "RW 020",
+      "kelurahan": 3
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 37,
+    "fields": {
+      "name": "RW 01 - 08",
+      "kelurahan": 1
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 38,
+    "fields": {
+      "name": "RW 1 - 8",
+      "kelurahan": 2
+    }
+  },
+  {
+    "model": "base.rw",
+    "pk": 39,
+    "fields": {
+      "name": "RW 001 - 020",
+      "kelurahan": 3
+    }
+  },
+  
+  {
+    "model": "base.bidang",
+    "pk": 2,
+    "fields": {
+      "name": "Pendidikan"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 3,
+    "fields": {
+      "name": "Kesehatan"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 4,
+    "fields": {
+      "name": "Pekerjaan Umum"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 5,
+    "fields": {
+      "name": "Perumahan"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 6,
+    "fields": {
+      "name": "Penataan Ruang"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 7,
+    "fields": {
+      "name": "Perencanaan Pembangunan"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 8,
+    "fields": {
+      "name": "Perhubungan"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 9,
+    "fields": {
+      "name": "Lingkungan HIdup"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 10,
+    "fields": {
+      "name": "Pertanahan"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 11,
+    "fields": {
+      "name": "Kependudukan dan catatan sipil"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 12,
+    "fields": {
+      "name": "Pemberdayaan Perempuan dan Perlindungan Anak"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 13,
+    "fields": {
+      "name": "Keluarga Berencana dan Keluarga Sejahtera"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 14,
+    "fields": {
+      "name": "Sosial"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 15,
+    "fields": {
+      "name": "Ketenagakerjaan"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 16,
+    "fields": {
+      "name": "Koperasi dan usaha kecil dan menengah"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 17,
+    "fields": {
+      "name": "Penanaman Modal"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 18,
+    "fields": {
+      "name": "Kebudayaan"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 19,
+    "fields": {
+      "name": "Kepemudaan dan Olahraga"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 20,
+    "fields": {
+      "name": "Kesatuan Bangsa dan Politik dalam Negeri"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 21,
+    "fields": {
+      "name": "Ketahanan Pangan"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 22,
+    "fields": {
+      "name": "Pemberdayaan masyarakat dan desa"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 23,
+    "fields": {
+      "name": "Statistik"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 24,
+    "fields": {
+      "name": "Kearsipan"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 25,
+    "fields": {
+      "name": "Komunikasi dan Informatika"
+    }
+  },
+  {
+    "model": "base.bidang",
+    "pk": 26,
+    "fields": {
+      "name": "Perpustakaan"
+    }
+  },
+  {
+    "model": "base.program",
+    "pk": 1,
+    "fields": {
+      "name": "Program Pelayanan Administrasi Perkantoran"
+    }
+  },
+  {
+    "model": "base.program",
+    "pk": 2,
+    "fields": {
+      "name": "Program peningkatan sarana dan prasarana aparatur"
+    }
+  },
+  {
+    "model": "base.program",
+    "pk": 3,
+    "fields": {
+      "name": "Program Peningkatan Disiplin Aparatur"
+    }
+  },
+  {
+    "model": "base.program",
+    "pk": 4,
+    "fields": {
+      "name": "Program Peningkatan Kapasitas Sumber Daya Aparatur"
+    }
+  },
+  {
+    "model": "base.program",
+    "pk": 5,
+    "fields": {
+      "name": "Program Pembinaan dan pengembangan aparatur"
+    }
+  },
+  {
+    "model": "base.program",
+    "pk": 6,
+    "fields": {
+      "name": "Program Peningkatan peran Kecamatan dan Kelurahan"
+    }
+  },
+  {
+    "model": "base.program",
+    "pk": 7,
+    "fields": {
+      "name": "Program PIPPK"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 1,
+    "fields": {
+      "name": "Penyediaan Jasa Pemeliharaan dan Perizinan"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 2,
+    "fields": {
+      "name": "Penyediaan Jasa Komunikasi, SDA dan Listrik"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 3,
+    "fields": {
+      "name": "Penyediaan Jasa Kebersihan Kantor"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 4,
+    "fields": {
+      "name": "Penyediaan Pembayaran Jasa Perbaikan Alat Kerja"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 5,
+    "fields": {
+      "name": "Penyediaan Alat Tulis Kantor"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 6,
+    "fields": {
+      "name": "Penyediaan Barang Cetakan dan Penggandaan"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 7,
+    "fields": {
+      "name": "Penyediaan Komponen Instalasi Listrik / Penerangan"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 8,
+    "fields": {
+      "name": "Penyediaan Peralatan dan Perlengkapan Kantor"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 9,
+    "fields": {
+      "name": "Penyediaan Peralatan Rumah Tangga"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 10,
+    "fields": {
+      "name": "Penyediaan Bahan Bacaan dan Peraturan Perundangan"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 11,
+    "fields": {
+      "name": "Penyediaan Bahan Logistik Kantor"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 12,
+    "fields": {
+      "name": "Penyediaan Makanan dan Minuman"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 13,
+    "fields": {
+      "name": "Rapat-rapat Konsultasi Keluar Daerah"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 14,
+    "fields": {
+      "name": "Penyediaan Tenaga Kerja Pendukung Administrasi"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 15,
+    "fields": {
+      "name": "Penyediaan Jasa Pengamanan Kantor"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 16,
+    "fields": {
+      "name": "Pengadaan Kendaraan Dinas / Operasional"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 17,
+    "fields": {
+      "name": "Pembangunan Gedung Kantor"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 18,
+    "fields": {
+      "name": "Pengadaan Perlengkapan Gedung Kantor"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 19,
+    "fields": {
+      "name": "Pengadaan Mebeulair"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 20,
+    "fields": {
+      "name": "Pemeliharaan Rutin / Berkala Gedung Kantor"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 21,
+    "fields": {
+      "name": "Pemeliharaan Rutin / Berkala Kendaraan Dinas"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 22,
+    "fields": {
+      "name": "Rehabilitasi Sedang / Berat Gedung Kantor"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 23,
+    "fields": {
+      "name": "Pengadaan Pakaian Dinas Beserta Kelengkapannya"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 24,
+    "fields": {
+      "name": "Pengadaan Pakaian KORPRI"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 25,
+    "fields": {
+      "name": "Pengadaan Pakaian Khusus Hari-hari Tertentu"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 26,
+    "fields": {
+      "name": "Pembinaan Kinerja Aparatur"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 27,
+    "fields": {
+      "name": "Penyusunan Lakip dan Ikhtiar Realisasi Kinerja"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 28,
+    "fields": {
+      "name": "Penyusunan Pelaporan Keuangan Semesteran"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 29,
+    "fields": {
+      "name": "Penyusunan Pelaporan Progonis Realisasi Anggaran"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 30,
+    "fields": {
+      "name": "Penyusunan Rencana Strategis dan Rencana Kerja"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 31,
+    "fields": {
+      "name": "Penyusunan Pelaporan Keuangan Akhir Tahun"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 32,
+    "fields": {
+      "name": "Penyegaran Minset Pola Kerja"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 33,
+    "fields": {
+      "name": "Fasilitasi Peningkatan Perekonomian Masyarakat"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 34,
+    "fields": {
+      "name": "Fasilitasi Peningkatan Kualitas Hidup Masyarakat"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 35,
+    "fields": {
+      "name": "Fasilitasi Peningkatan Pemerintahan Umum Kecamatan"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 36,
+    "fields": {
+      "name": "Fasilitasi Pelayanan Umum Kepada Masyarakat"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 37,
+    "fields": {
+      "name": "Fasilitasi Pemberdayaan Lingkup RW"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 38,
+    "fields": {
+      "name": "Fasilitasi Pemberdayaan Lingkup PKK"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 39,
+    "fields": {
+      "name": "Fasilitasi Pemberdayaan Lingkup Karang Taruna"
+    }
+  },
+  {
+    "model": "base.kegiatan",
+    "pk": 40,
+    "fields": {
+      "name": "Fasilitasi Pemberdayaan Lingkup LPM"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 1,
+    "fields": {
+      "name": "Badan Kesatuan Bangsa dan Pemberdayaan Masyarakat"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 2,
+    "fields": {
+      "name": "Badan Pemberdayaan Perempuan dan KB"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 3,
+    "fields": {
+      "name": "Badan Pengelola Lingkungan Hidup"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 4,
+    "fields": {
+      "name": "Dinas Bina Marga dan Pengairan"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 5,
+    "fields": {
+      "name": "Dinas Kebudayaan dan Pariwisata"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 6,
+    "fields": {
+      "name": "Dinas Kependudukan dan Pencatatan Sipil"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 7,
+    "fields": {
+      "name": "Dinas Kesehatan"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 8,
+    "fields": {
+      "name": "Dinas Komunikasi dan Informasi"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 9,
+    "fields": {
+      "name": "Dinas Pemakaman dan Pertamanan"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 10,
+    "fields": {
+      "name": "Dinas Pemuda dan Olah Raga"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 11,
+    "fields": {
+      "name": "Dinas Pencegahan dan Penanggulangan Kebakaran"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 12,
+    "fields": {
+      "name": "Dinas KUKM dan Perindustrian Perdagangan"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 13,
+    "fields": {
+      "name": "Dinas Pendidikan"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 14,
+    "fields": {
+      "name": "Dinas Pengelolaan Keuangan dan Aset Daerah"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 15,
+    "fields": {
+      "name": "Dinas Perhubungan"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 16,
+    "fields": {
+      "name": "Dinas Pertanian dan Ketahanan Pangan"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 17,
+    "fields": {
+      "name": "Dinas Sosial"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 18,
+    "fields": {
+      "name": "Dinas Tata Ruang dan Cipta Karya"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 19,
+    "fields": {
+      "name": "Dinas Tenaga Kerja"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 20,
+    "fields": {
+      "name": "Kantor Perpustakaan dan Arsip Daerah"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 21,
+    "fields": {
+      "name": "Kantor Satuan Polisi Pamong Praja"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 22,
+    "fields": {
+      "name": "SETDA. Bag. Hukum dan HAM"
+    }
+  },
+  {
+    "model": "base.skpdtujuan",
+    "pk": 23,
+    "fields": {
+      "name": "SETDA. Bag. Pemerintahan Umum"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can add kecamatan",
+      "content_type": 7,
+      "codename": "add_kecamatan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can change kecamatan",
+      "content_type": 7,
+      "codename": "change_kecamatan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can delete kecamatan",
+      "content_type": 7,
+      "codename": "delete_kecamatan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can add kelurahan",
+      "content_type": 8,
+      "codename": "add_kelurahan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can change kelurahan",
+      "content_type": 8,
+      "codename": "change_kelurahan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can delete kelurahan",
+      "content_type": 8,
+      "codename": "delete_kelurahan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add rw",
+      "content_type": 9,
+      "codename": "add_rw"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change rw",
+      "content_type": 9,
+      "codename": "change_rw"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete rw",
+      "content_type": 9,
+      "codename": "delete_rw"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can add lpm",
+      "content_type": 10,
+      "codename": "add_lpm"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can change lpm",
+      "content_type": 10,
+      "codename": "change_lpm"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can delete lpm",
+      "content_type": 10,
+      "codename": "delete_lpm"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can add pkk",
+      "content_type": 11,
+      "codename": "add_pkk"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can change pkk",
+      "content_type": 11,
+      "codename": "change_pkk"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can delete pkk",
+      "content_type": 11,
+      "codename": "delete_pkk"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can add karang taruna",
+      "content_type": 12,
+      "codename": "add_karangtaruna"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can change karang taruna",
+      "content_type": 12,
+      "codename": "change_karangtaruna"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can delete karang taruna",
+      "content_type": 12,
+      "codename": "delete_karangtaruna"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add urusan",
+      "content_type": 13,
+      "codename": "add_urusan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change urusan",
+      "content_type": 13,
+      "codename": "change_urusan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete urusan",
+      "content_type": 13,
+      "codename": "delete_urusan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can add bidang",
+      "content_type": 14,
+      "codename": "add_bidang"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can change bidang",
+      "content_type": 14,
+      "codename": "change_bidang"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can delete bidang",
+      "content_type": 14,
+      "codename": "delete_bidang"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can add program",
+      "content_type": 15,
+      "codename": "add_program"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can change program",
+      "content_type": 15,
+      "codename": "change_program"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can delete program",
+      "content_type": 15,
+      "codename": "delete_program"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can add kegiatan",
+      "content_type": 16,
+      "codename": "add_kegiatan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can change kegiatan",
+      "content_type": 16,
+      "codename": "change_kegiatan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can delete kegiatan",
+      "content_type": 16,
+      "codename": "delete_kegiatan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add prioritas daerah",
+      "content_type": 17,
+      "codename": "add_prioritasdaerah"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change prioritas daerah",
+      "content_type": 17,
+      "codename": "change_prioritasdaerah"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete prioritas daerah",
+      "content_type": 17,
+      "codename": "delete_prioritasdaerah"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can add sasaran daerah",
+      "content_type": 18,
+      "codename": "add_sasarandaerah"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can change sasaran daerah",
+      "content_type": 18,
+      "codename": "change_sasarandaerah"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can delete sasaran daerah",
+      "content_type": 18,
+      "codename": "delete_sasarandaerah"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can add skpd tujuan",
+      "content_type": 19,
+      "codename": "add_skpdtujuan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can change skpd tujuan",
+      "content_type": 19,
+      "codename": "change_skpdtujuan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can delete skpd tujuan",
+      "content_type": 19,
+      "codename": "delete_skpdtujuan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can add musrenbang",
+      "content_type": 20,
+      "codename": "add_musrenbang"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can change musrenbang",
+      "content_type": 20,
+      "codename": "change_musrenbang"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can delete musrenbang",
+      "content_type": 20,
+      "codename": "delete_musrenbang"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+      "name": "Can add pippk",
+      "content_type": 21,
+      "codename": "add_pippk"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+      "name": "Can change pippk",
+      "content_type": 21,
+      "codename": "change_pippk"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+      "name": "Can delete pippk",
+      "content_type": 21,
+      "codename": "delete_pippk"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+      "name": "Can add detail user",
+      "content_type": 22,
+      "codename": "add_detailuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+      "name": "Can change detail user",
+      "content_type": 22,
+      "codename": "change_detailuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+      "name": "Can delete detail user",
+      "content_type": 22,
+      "codename": "delete_detailuser"
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "musrenbang",
+      "permissions": [
+        58,
+        59,
+        60
+      ]
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+      "name": "pippk",
+      "permissions": [
+        61,
+        62,
+        63
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$DNNIOJ8eQzV1$OcH4YOjronlpHodaBahW33ym80DYr62+9i5eTk0PGhk=",
+      "last_login": "2016-06-28T07:50:37.334Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admi@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2016-06-26T20:41:19.100Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$ADUriPgQc2ZU$Bpn3JstMkn1YeMPJ30q5kTbeDf/GZDUPwaW3G4dLnFI=",
+      "last_login": "2016-06-26T20:56:10.871Z",
+      "is_superuser": false,
+      "username": "udin",
+      "first_name": "",
+      "last_name": "",
+      "email": "udin@udin.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-26T20:55:58.243Z",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "banwet01",
+      "last_login": "2016-06-27T04:04:40.177Z",
+      "is_superuser": false,
+      "username": "kelurahan citarum",
+      "first_name": "",
+      "last_name": "",
+      "email": "kelcitarum.bawet@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2016-06-27T03:57:54.229Z",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$GrxXHA0xtb9C$H6Pqmnsm3MUy1Pht0kRXTjYo4g85NJQaTEJ9gWjpOH8=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "kelurahan cihapit",
+      "first_name": "",
+      "last_name": "",
+      "email": "kel_cihapit@yahoo.co.id",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2016-06-27T04:54:00.146Z",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$RV8KcRfomkUP$d4+FsQGtMndRCswEVu2SS6z5Xi6yN5v9WJG/PZEw65s=",
+      "last_login": "2016-06-27T08:13:29.556Z",
+      "is_superuser": false,
+      "username": "kelurahan tamansari",
+      "first_name": "",
+      "last_name": "",
+      "email": "kelurahan.tamsar@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2016-06-27T04:57:05.383Z",
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$vlkjD7nwNcXU$wO1UaZAWWlF8XWxcetr2FTZ2cwCpRkFplIPv0OPd4aI=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "cihapit01",
+      "first_name": "",
+      "last_name": "",
+      "email": "yudi@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:11:43.355Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$jKuAVvladHcb$D0Nwka/rtEJgFM0igIdXrNA96BB1PRIso9suc+DT/l8=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "cihapit02",
+      "first_name": "",
+      "last_name": "",
+      "email": "nolly@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:27:24.861Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$287q0MWvNjv7$ZjRSJ3BtpuNeff7zsVf7MLXo8FxeLUYsCa5sVoWw13U=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "cihapit03",
+      "first_name": "",
+      "last_name": "",
+      "email": "suripto@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:29:50.740Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$IqRjcN5rQo2r$gP7SuFJATy8dtnPdgiWoiA4J1kDFabGv04DYwgGsJ4c=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "cihapit04",
+      "first_name": "",
+      "last_name": "",
+      "email": "adhe@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:31:37.617Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$Fbr6PUS14WvW$yvQKhdpdzK8sHq4O2n6zlSqfmn50cepc3n7FcH7uLfM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "cihapit05",
+      "first_name": "",
+      "last_name": "",
+      "email": "ardini@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:37:01.150Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$7nkBANS5rDyn$HE/Veh4tQu5JwpUJtCqngKlFMAlzNCK+p4AFFeHL3eE=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "cihapit06",
+      "first_name": "",
+      "last_name": "",
+      "email": "edi@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:38:27.467Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 12,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$2Tbt2WMgBkI5$u7jIDqWuiDVXu376Wb7dyQaPSVVTiPwGlnNWE29BqfM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "cihapit07",
+      "first_name": "",
+      "last_name": "",
+      "email": "aris@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:40:10.417Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 13,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$EkhCCtAz7Tfw$SPF0RBrcRQEW3cwJtJ1GHzrUgo5pK6hVhptaKSbKmKc=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "cihapit08",
+      "first_name": "",
+      "last_name": "",
+      "email": "maringan@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:41:29.132Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$irhblVJPNgIb$8cOb/GQWPGpULFsYPMsDtrGN40Gc8XyTKiMOCzQEMuc=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "citarum01",
+      "first_name": "",
+      "last_name": "",
+      "email": "ruhiman@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:45:13.997Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 15,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$aQo0RQyoT2BP$1X3pWYmqmoZKg01uYrfetmv2reBcVmcKr/F/UAkI5hA=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "citarum02",
+      "first_name": "",
+      "last_name": "",
+      "email": "danny@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:46:40.954Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 16,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$aWCevWeGs242$3OCfLMvwCIwItcLg36GWJjjA62q8LHxcHXq47TbcQa8=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "citarum03",
+      "first_name": "",
+      "last_name": "",
+      "email": "achmadi@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:50:08.899Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 17,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$kFKbjS8EL79m$BnrS4oJNwi73XOMuUOSADp/IYZFlt8/oqEF/+Z0ygvA=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "citarum04",
+      "first_name": "",
+      "last_name": "",
+      "email": "sujarwo@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:52:23.833Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 18,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$C9NxaNWYB15C$WAnSjMW665u7ymx/p2BZOlK2mAu0YOm2A12IVbnDfbc=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "citarum05",
+      "first_name": "",
+      "last_name": "",
+      "email": "kasidi@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:53:29.763Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 19,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$s1LAPnRhEtNW$7fDgKCzwtiKjCoMMlOOXti7bVT6UNyn8t/qmgpd8JWk=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "citarum06",
+      "first_name": "",
+      "last_name": "",
+      "email": "pramutady@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:55:39.231Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 20,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$9OGdzu8UDmac$wTgTPDVPIuwdGBhwHCtvJba5wyInTOV56VNOSWCvDmM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "citarum07",
+      "first_name": "",
+      "last_name": "",
+      "email": "husni@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:56:34.839Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 21,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$eL0zWHEHRom8$puZ/DN7l6Smi3B6NW8mM92bcoqdGKlJeWGFzKvFIKeY=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "citarum08",
+      "first_name": "",
+      "last_name": "",
+      "email": "nana@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T05:57:33.602Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 22,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$Bm9p3sLnMQjF$vMIzajZaT7yhJf6zc4jzg8+T7AvoUC4rR6ESbJBXSqg=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar01",
+      "first_name": "",
+      "last_name": "",
+      "email": "saefulloh@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T06:42:18.211Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 23,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$RbwOr320T9dz$3u0TOjXR8QkfTpniD4l/dmrGt+naPW07zkpUgXtkNrQ=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar02",
+      "first_name": "",
+      "last_name": "",
+      "email": "listijanto@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T06:43:39.630Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 24,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$QtHLf6LtMAUo$KURCA4tEM0xfdEauLHB8cLN2KTgX85tPrbMmbqywwIw=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar03",
+      "first_name": "",
+      "last_name": "",
+      "email": "miduk@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T06:44:33.726Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 25,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$L0DRy2QZOvJP$kU3yl4F76xjKhTbVsTb3gwsSsXmTWEZpK/XWvNMFDyE=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar04",
+      "first_name": "",
+      "last_name": "",
+      "email": "didi@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T06:45:33.917Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 26,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$6xMVKCtuUfsL$m32tOgXzLNLfFZz7/viARBkFdNncLfiCGt/yj9OREuw=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar05",
+      "first_name": "",
+      "last_name": "",
+      "email": "endang@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T06:48:16.653Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 27,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$nKk1I296cMTH$e6OwofJ2qxEPc1ChcxTJurrpg1PdBkc8B4kuQKjzjmQ=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar06",
+      "first_name": "",
+      "last_name": "",
+      "email": "mulyadi@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T06:49:55.724Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 28,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$OOrETvouC5L0$AUzlSwgro6XjHW0RDty+/PzIvrYwmZTHiwU1huQHoDo=",
+      "last_login": "2016-06-27T08:04:35.935Z",
+      "is_superuser": false,
+      "username": "tamsar07",
+      "first_name": "",
+      "last_name": "",
+      "email": "wawa@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T06:51:04.334Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 29,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$nLe6HgBCP3VR$bAI2tRO5/HtRwm0K1uWkkLZ9iesTLCUgJ9lHOCm1zUQ=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar08",
+      "first_name": "",
+      "last_name": "",
+      "email": "anna@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T06:51:59.693Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 30,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$KteCZhblyPWB$WJEckCRIPXZycDJRIyhKrctiHXNDqzN9JhuRQwxJZMc=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar09",
+      "first_name": "",
+      "last_name": "",
+      "email": "hidayat@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T06:53:06.148Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 31,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$ffXY6KvDoAtu$WdGHGUSKeVOTGA/p+2EYE1JeTeocwLgkCm3gopAi0xU=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar10",
+      "first_name": "",
+      "last_name": "",
+      "email": "nana@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T06:53:50.029Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 32,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$oAjq8JWkqx7f$Z+JZK/tjFvsqLoqqIQT8aefbQ/qr5OhHvQnrv56EJMQ=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar11",
+      "first_name": "",
+      "last_name": "",
+      "email": "syahroni@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T06:56:32.625Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 33,
+    "fields": {
+      "password": "banwet31",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar12",
+      "first_name": "",
+      "last_name": "",
+      "email": "harun@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T06:57:22.797Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 34,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$UBNf06EORPnY$KlbgWOSyOjD+BzKm9J4VWj66397OsfPMsmEri9ugJcI=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar13",
+      "first_name": "",
+      "last_name": "",
+      "email": "agus@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T06:58:29.729Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 35,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$85dCWPHVjiNY$YOiOezm6RNa3PuMDS7dCWlI4cPvNiYnO4fYKAqZsuWU=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar14",
+      "first_name": "",
+      "last_name": "",
+      "email": "ibrahim@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T07:01:42.279Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 36,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$UxYw7F20QGht$uAGh3i7i8ijMO/DRRAjd8M/NM7R+cW3+Mh67BISeQnU=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar15",
+      "first_name": "",
+      "last_name": "",
+      "email": "irwan@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T07:02:34.172Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 37,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$twk1d4DeSPQf$egotu2FZr4wi6m+jZdro56ZOYA/9DGjrLmClokgAQqs=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar16",
+      "first_name": "",
+      "last_name": "",
+      "email": "yuyu@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T07:10:42.967Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 38,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$1tMchleDNUNW$js6bGOybODWe7zc/qrSZkI5lCp1TqoRctyLDEtA7Z24=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar17",
+      "first_name": "",
+      "last_name": "",
+      "email": "asep@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T07:11:54.479Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 39,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$eqNN57mulHu0$co4m2jOV1D04wfjVSQIh3uJKalFV0kSXvlyb0Se+NFM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar18",
+      "first_name": "",
+      "last_name": "",
+      "email": "asep@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T07:12:54.597Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 40,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$VluBIcgCw0X8$yhOM/GE0sPGdy1NFPi1TYoIkz/NE7aDJHRvLV3LD59E=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar19",
+      "first_name": "",
+      "last_name": "",
+      "email": "iyo@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T07:13:58.174Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 41,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$ibRG2u8YQdQ5$vL/RJOTTX02LNSaM3OrlQXVSdyzzp02pqgbP0tDtMNg=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "tamsar20",
+      "first_name": "",
+      "last_name": "",
+      "email": "dudi@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-27T07:14:49.339Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 42,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$Hm0rmKCR34VO$wsbceQ5lQkRhHBO6WPvYFfNhfJEv2ex1Tk1+qQdC0j4=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "lpmcihapit",
+      "first_name": "",
+      "last_name": "",
+      "email": "lpm@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-28T07:54:40.221Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 43,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$ELxQuwoF2Lcr$RNBvgSZ6mobq9Zf4uCq1C0XtOSTM9kiXThXzM49PS0o=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "pkkcihapit",
+      "first_name": "",
+      "last_name": "",
+      "email": "pkk@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-28T07:55:43.428Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 44,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$JrTBENXKAUMM$LEAgou+bMhusc38Zf4yuek7ru3qk3Lzvh4fn7xTuxas=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "kartacihapit",
+      "first_name": "",
+      "last_name": "",
+      "email": "karta@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-28T07:56:39.567Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 45,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$GmD3kClZsU4Y$44AGElyiGolewRJe10ph7I28ZjqnoNXyCBma/FKz9Uo=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "lpmcitarum",
+      "first_name": "",
+      "last_name": "",
+      "email": "lpm@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-28T07:57:25.015Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 46,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$qjWYWUAznZxN$WlprHB9TS1WkLuYcmCpgUj4WSBXvNtXav5ve7tx1GD8=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "pkkcitarum",
+      "first_name": "",
+      "last_name": "",
+      "email": "pkk@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-28T07:58:37.290Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 47,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$9Yd9ldRgCRSA$vs4FBatkHwZ/iNnaowddeQ6JHAp6SJiYNJVF4q7eHIU=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "kartacitarum",
+      "first_name": "",
+      "last_name": "",
+      "email": "karta@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-28T08:00:27.345Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 48,
+    "fields": {
+      "password": "banwet46",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "lpmtamsar",
+      "first_name": "",
+      "last_name": "",
+      "email": "lpm@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-28T08:01:10.826Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 49,
+    "fields": {
+      "password": "banwet47",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "pkktamsar",
+      "first_name": "",
+      "last_name": "",
+      "email": "pkk@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-28T08:02:12.951Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 50,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$r4JB1tSMan1Y$IdG8oaNP5lSkkr+WoN0z9ITHPK+jXOlOQxzYi57uQo0=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "kartatamsar",
+      "first_name": "",
+      "last_name": "",
+      "email": "karta@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2016-06-28T08:03:25.858Z",
+      "groups": [
+        2
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 1,
+    "fields": {
+      "full_name": "udin",
+      "user": 2,
+      "kecamatan": 1,
+      "kelurahan": null,
+      "rw": null,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "kecamatan"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 2,
+    "fields": {
+      "full_name": "Pak Lurah",
+      "user": 3,
+      "kecamatan": 1,
+      "kelurahan": 2,
+      "rw": null,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "kelurahan"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 3,
+    "fields": {
+      "full_name": "Pak Lurah",
+      "user": 4,
+      "kecamatan": 1,
+      "kelurahan": 1,
+      "rw": null,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "kelurahan"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 4,
+    "fields": {
+      "full_name": "Pak Lurah",
+      "user": 5,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": null,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "kelurahan"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 5,
+    "fields": {
+      "full_name": "Yudi Syafyuddin",
+      "user": 6,
+      "kecamatan": 1,
+      "kelurahan": 1,
+      "rw": 1,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 6,
+    "fields": {
+      "full_name": "Drs. Nolly Amir Hamzah",
+      "user": 7,
+      "kecamatan": 1,
+      "kelurahan": 1,
+      "rw": 2,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 7,
+    "fields": {
+      "full_name": "Drs. Suripto, ST",
+      "user": 8,
+      "kecamatan": 1,
+      "kelurahan": 1,
+      "rw": 3,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 8,
+    "fields": {
+      "full_name": "Adhe Prayogo, SH",
+      "user": 9,
+      "kecamatan": 1,
+      "kelurahan": 1,
+      "rw": 4,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 9,
+    "fields": {
+      "full_name": "Dr. Hj. Ardini, S Raksanagara",
+      "user": 10,
+      "kecamatan": 1,
+      "kelurahan": 1,
+      "rw": 5,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 10,
+    "fields": {
+      "full_name": "Drs. Edi Rifayadi",
+      "user": 11,
+      "kecamatan": 1,
+      "kelurahan": 1,
+      "rw": 6,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 11,
+    "fields": {
+      "full_name": "Aris Moch RIdzal",
+      "user": 12,
+      "kecamatan": 1,
+      "kelurahan": 1,
+      "rw": 7,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 12,
+    "fields": {
+      "full_name": "Dr. Maringan Tobing",
+      "user": 13,
+      "kecamatan": 1,
+      "kelurahan": 1,
+      "rw": 8,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 13,
+    "fields": {
+      "full_name": "Ruhiman",
+      "user": 14,
+      "kecamatan": 1,
+      "kelurahan": 2,
+      "rw": 9,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 14,
+    "fields": {
+      "full_name": "Danny S . Pattirane",
+      "user": 15,
+      "kecamatan": 1,
+      "kelurahan": 2,
+      "rw": 10,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 15,
+    "fields": {
+      "full_name": "R.H.E.Achmadi Soediutomo.SE",
+      "user": 16,
+      "kecamatan": 1,
+      "kelurahan": 2,
+      "rw": 11,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 16,
+    "fields": {
+      "full_name": "Sujarwo",
+      "user": 17,
+      "kecamatan": 1,
+      "kelurahan": 2,
+      "rw": 12,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 17,
+    "fields": {
+      "full_name": "H. Kasidi",
+      "user": 18,
+      "kecamatan": 1,
+      "kelurahan": 2,
+      "rw": 13,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 18,
+    "fields": {
+      "full_name": "Drs. Pramutady",
+      "user": 19,
+      "kecamatan": 1,
+      "kelurahan": 2,
+      "rw": 14,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 19,
+    "fields": {
+      "full_name": "Husni Syawali,SH,M.Hum",
+      "user": 20,
+      "kecamatan": 1,
+      "kelurahan": 2,
+      "rw": 15,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 20,
+    "fields": {
+      "full_name": "Nana  Iriana",
+      "user": 21,
+      "kecamatan": 1,
+      "kelurahan": 2,
+      "rw": 16,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 21,
+    "fields": {
+      "full_name": "Saefulloh",
+      "user": 22,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 17,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 22,
+    "fields": {
+      "full_name": "Listijanto",
+      "user": 23,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 18,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 23,
+    "fields": {
+      "full_name": "Miduk",
+      "user": 24,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 19,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 24,
+    "fields": {
+      "full_name": "Didi Supriadi",
+      "user": 25,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 20,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 25,
+    "fields": {
+      "full_name": "Endang Kurnia, SE",
+      "user": 26,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 21,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 26,
+    "fields": {
+      "full_name": "S. Mulyadi",
+      "user": 27,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 22,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 27,
+    "fields": {
+      "full_name": "Wawa Suryanto",
+      "user": 28,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 23,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 28,
+    "fields": {
+      "full_name": "Dra. Anna Jana H",
+      "user": 29,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 24,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 29,
+    "fields": {
+      "full_name": "Drs. Hidayat Supriadi",
+      "user": 30,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 25,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 30,
+    "fields": {
+      "full_name": "Nana Garmana",
+      "user": 31,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 26,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 31,
+    "fields": {
+      "full_name": "Syahroni",
+      "user": 32,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 27,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 32,
+    "fields": {
+      "full_name": "Harun Kasirun",
+      "user": 33,
+      "kecamatan": 1,
+      "kelurahan": null,
+      "rw": 28,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 33,
+    "fields": {
+      "full_name": "Agus Kalana",
+      "user": 34,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 29,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 34,
+    "fields": {
+      "full_name": "H. Ibrahim",
+      "user": 35,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 30,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 35,
+    "fields": {
+      "full_name": "Irwan Ginanjar",
+      "user": 36,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 31,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 36,
+    "fields": {
+      "full_name": "Yuyu A. Wahyu",
+      "user": 37,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 32,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 37,
+    "fields": {
+      "full_name": "Asep Supridi",
+      "user": 38,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 33,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 38,
+    "fields": {
+      "full_name": "Asep Edi Mulyono",
+      "user": 39,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 34,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 39,
+    "fields": {
+      "full_name": "Iyo Satrio Warsono",
+      "user": 40,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 35,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  {
+    "model": "base.detailuser",
+    "pk": 40,
+    "fields": {
+      "full_name": "H. Dudy Djuanda",
+      "user": 41,
+      "kecamatan": 1,
+      "kelurahan": 3,
+      "rw": 36,
+      "lpm": null,
+      "pkk": null,
+      "karangtaruna": null,
+      "tipe": "rw"
+    }
+  },
+  
+ 
+ 
+  
+ 
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2016-06-26T20:54:37.809Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "musrenbang",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2016-06-26T20:54:58.966Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "2",
+      "object_repr": "pippk",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  }
+]

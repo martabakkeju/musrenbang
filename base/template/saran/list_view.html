@@ -1,0 +1,46 @@
+<!-- BEGIN EXAMPLE TABLE PORTLET-->
+<div class="portlet light bordered">
+	<div class="portlet-title"> 
+		<a href="{% url 'SaranAdd' %}" class="btn btn-circle blue" style="float: right;">Tambah</a>	
+		<div class="caption font-dark">
+			<i class="icon-settings font-dark"></i>
+			<span class="caption-subject bold uppercase">Tambah Saran</span><br/><br/>
+		</div>
+
+		<div class="tools"> </div>
+	</div>
+
+	<div class="portlet-body">
+		<table class="table table-striped table-bordered " id="sample_3">
+			<thead>
+				<tr>
+					<th> Nama Lengkap </th>
+					<th> Email </th>
+					<th> Telp </th>
+					<th> No. KTP </th>
+					<th> Judul Saran </th>
+					<th width="190 px" class="dontprint"> Actions </th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for i in object_list %}
+				{% if i.terima == True or request.user.is_superuser %}
+				<tr>
+					<td> {{i.nama_lengkap}} </td>
+					<td> {{i.email}}</td>
+					<td> {{i.telp}} </td>
+					<td> {{i.no_ktp}}</td>
+					<td> {{i.judul}} </td>
+					<td class="dontprint">
+						{% if request.user.is_superuser %}
+						<a href="{% url 'SaranDelete' i.id %}" class="btn btn-circle red">Hapus</a>
+						{% endif %}
+						<a href="{% url 'SaranDetail' i.id %}" class="btn btn-circle yellow">Detail</a>
+					</td>
+				</tr>
+				{% endif %}
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,82 @@
+<!-- BEGIN EXAMPLE TABLE PORTLET-->
+<div class="portlet light bordered">
+	<div class="portlet-title"> 
+		{% if request.user.groups.all.0.name == 'musrenbang' or request.user.groups.all.0.name == 'pippk' %}
+		<a href="{% url 'MusrenbangAdd' %}" class="btn btn-circle blue" style="float: right;">Tambah</a>	
+		{% endif %}
+		<div class="caption font-dark">
+			<i class="icon-settings font-dark"></i>
+			<span class="caption-subject bold uppercase">Tabel Musrenbang</span><br/><br/>
+			
+		</div>
+
+		<div class="tools"> </div>
+	</div>
+
+	<div class="portlet-body">
+		<table class="table table-striped table-bordered " id="musrenbang">
+			<thead>
+				<tr>
+					<th> Kegiatan </th>
+					<th> Sasaran </th>
+					<th> Volume </th>
+					<th> Usulan Pagu </th>
+					<th> SKPD Tujuan </th>
+					<th> Status </th>
+					<th> Alasan</th>
+					<th width="190 px" class="dontprint"> Actions </th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for i in object_list %}
+				<tr>
+					<td> {{i.kegiatan}} </td>
+					<td> {{i.sasaran}}</td>
+					<td> {{i.volume}} </td>
+					<td> {{i.usulan}}</td>
+					<td> {{i.skpdtujuan}} </td>
+					<td> {{i.status}} </td>
+					<td> {{i.alasan}} </td>
+					<td class="dontprint">
+						{% if request.user.groups.all.0.name == 'musrenbang' or request.user.is_superuser or request.user.groups.all.0.name == 'musrenbang' %}
+						{% if i.status == 'belum di akomodir' %}
+						<a href="{% url 'MusrenbangUpdate' i.id %}" class="btn btn-circle green">Perbarui</a> 
+						<a href="{% url 'MusrenbangDelete' i.id %}" class="btn btn-circle red">Hapus</a>
+						</br>
+						</br>
+						{% endif %}
+						{% endif %}
+						<a href="{% url 'MusrenbangDetail' i.id %}" class="btn btn-circle yellow">Detail</a>
+						{% if request.user.is_superuser and i.status == 'di akomodir' %}
+							<a class="btn btn-circle blue" data-toggle="modal" href="#draggable">Foto Kegiatan</a>
+						{% endif %}
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="modal fade draggable-modal" id="draggable" tabindex="-1" role="basic" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">Upload Foto Kegiatan</h4>
+			</div>
+			<div class="modal-body"> 
+				<form action="/test" class="dropzone dropzone-file-area" id="my-dropzone" style="width: 500px; margin-top: 50px;">
+                    <h3 class="sbold">Drop files here or click to upload</h3>
+                    <p> This is just a demo dropzone. Selected files are not actually uploaded. </p>
+                </form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
+				<button type="button" class="btn green" data-dismiss="modal">Save changes</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>

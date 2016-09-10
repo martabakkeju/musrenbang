@@ -1,0 +1,195 @@
+{% extends "index.html" %}
+
+{% block header %}
+        <meta charset="utf-8" />
+        <title>SmartPlan | Musrenbang</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta content="" name="description" />
+        <meta content="" name="author" />
+        <!-- BEGIN LAYOUT FIRST STYLES -->
+        <link href="//fonts.googleapis.com/css?family=Oswald:400,300,700" rel="stylesheet" type="text/css" />
+        <!-- END LAYOUT FIRST STYLES -->
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <link href="/static/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="/static/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="/static/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="/static/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+        <!-- END GLOBAL MANDATORY STYLES -->
+
+
+
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+   <!--      <link href="/static/assets/global/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+        <link href="/static/assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN THEME GLOBAL STYLES -->
+        <link href="/static/assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="/static/assets/global/css/plugins.min.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME GLOBAL STYLES -->
+        <!-- BEGIN PAGE LEVEL STYLES -->
+        <link href="/static/assets/pages/css/invoice-2.min.css" rel="stylesheet" type="text/css" />
+        <!-- END PAGE LEVEL STYLES -->
+
+        <!-- BEGIN THEME LAYOUT STYLES -->
+        <link href="/static/assets/layouts/layout5/css/layout.min.css" rel="stylesheet" type="text/css" />
+        <link href="/static/assets/layouts/layout5/css/custom.min.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME LAYOUT STYLES -->
+            <script src="/static/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+        <link rel="shortcut icon" href="favicon.ico" />
+
+{% endblock %}
+{% block content %}
+<div class="breadcrumbs">
+    <h1>Detail Informasi Pippk</h1>
+    <ol class="breadcrumb">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li class="active">Detail Pippk</li>
+    </ol>
+</div>
+
+<div class="page-content-col">
+    <!-- BEGIN PAGE BASE CONTENT -->
+    <div class="invoice-content-2 bordered">
+        <div class="row invoice-head">
+            <div class="col-md-7 col-xs-6">
+                <div class="invoice-logo">
+                    
+                    <h1 class="uppercase"># {% if object.tipe == 'lpm' %}{{object.kelurahan}}-{% endif %}{% if object.tipe == 'pkk' %}{{object.kelurahan}}-{% endif %}{% if object.tipe == 'karangtaruna' %}{{object.kelurahan}}-{% endif %}{{object.rw}}</h1>
+                </div>
+            </div>
+            <div class="col-md-5 col-xs-6">
+                <div class="company-address">
+                    <span class="bold uppercase">Lembaga Kemasyarakatan</span>
+                    <br/>{% if object.tipe == 'lpm' %}{{object.lpm}},{% endif %}{% if object.tipe == 'pkk' %}{{object.pkk}},{% endif %}{% if object.tipe == 'karangtaruna' %}{{object.karangtaruna}},{% endif %} Rw {{object.rw}} 
+                    <br/>
+                </div>
+            </div>
+        </div>
+        </br>
+        <hr style="border-width: 5px 0 0">
+        <div class="row invoice-cust-add">
+            <div class="col-xs-4">
+                <h2 class="invoice-title uppercase">Urusan</h2>
+                <p class="invoice-desc">{{ object.urusan }}</p>
+            </div>
+            <div class="col-xs-4">
+                <h2 class="invoice-title uppercase">Bidang Urusan</h2>
+                <p class="invoice-desc">{{ object.bidang }}</p>
+            </div>
+        </div>
+
+        <div class="row invoice-cust-add">
+            <div class="col-xs-8">
+                <h2 class="invoice-title uppercase">Prioritas Daerah</h2>
+                <p class="invoice-desc">{{ object.prioritasdaerah }}</p>
+            </div>
+        </div>
+
+        <div class="row invoice-cust-add">
+            <div class="col-xs-8">
+                <h2 class="invoice-title uppercase">Sasaran Daerah</h2>
+                <p class="invoice-desc">{{ object.sasarandaerah }}</p>
+            </div>
+        </div>
+
+        <div class="row invoice-cust-add">
+            <div class="col-xs-8">
+                <h2 class="invoice-title uppercase">Program</h2>
+                <p class="invoice-desc">{{ object.program }}</p>
+            </div>
+        </div>
+
+        <div class="row invoice-cust-add">
+            <div class="col-xs-8">
+                <h2 class="invoice-title uppercase">Kegiatan</h2>
+                <p class="invoice-desc">{{ object.kegiatan }}</p>
+            </div>
+        </div>
+
+        <div class="row invoice-cust-add">
+            <div class="col-xs-8">
+                <h2 class="invoice-title uppercase">Sasaran</h2>
+                <p class="invoice-desc">{{ object.sasaran }}</p>
+            </div>
+        </div>
+
+        <div class="row invoice-cust-add">
+            <div class="col-xs-8">
+                <h2 class="invoice-title uppercase">Lokasi</h2>
+                <p class="invoice-desc">{{ object.lokasi }}</p>
+            </div>
+        </div>
+
+        <div class="row invoice-cust-add">
+            <div class="col-xs-4">
+                <h2 class="invoice-title uppercase">Volume</h2>
+                <p class="invoice-desc">{{ object.volume }}</p>
+            </div>
+            <div class="col-xs-4">
+                <h2 class="invoice-title uppercase">Usulan Pagu</h2>
+                <p class="invoice-desc"><b>Rp</b> {{ object.usulan }}</p>
+            </div>
+        </div>
+
+        <div class="row invoice-cust-add">
+            <div class="col-xs-4">
+                <h2 class="invoice-title uppercase">Status</h2>
+                <p class="invoice-desc">{{ object.status }}</p>
+            </div>
+            {% if object.status == 'di tolak'%}
+            <div class="col-xs-8">
+                <h2 class="invoice-title uppercase">Alasan Tidak Diakomodir</h2>
+                <p class="invoice-desc">{{ object.alasan }}</p>
+            </div>
+            {% endif %}
+        </div>        
+
+        <div class="row">
+            <div class="col-xs-12">
+                {% if object.status = 'belum di akomodir' %}
+                {% if request.user.is_superuser or request.user.group.name == 'admin' %}
+                <a href="{% url 'PippkTolak' object.id %}" >
+                    <button class="btn btn-lg red-haze hidden-print print-btn">Tolak</button>
+                </a>
+                <form role="form" id="form1" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <button  class="btn btn-lg green-haze hidden-prin print-btn">Kordinir </button>
+                
+                </form>
+                {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+    <!-- END PAGE BASE CONTENT -->
+</div>
+{% endblock %}
+
+{% block bottom %}
+         <script src="/static/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+        <script src="/static/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="/static/assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+        <script src="/static/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+        <script src="/static/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="/static/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="/static/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+        <!-- END CORE PLUGINS -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+       
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN THEME GLOBAL SCRIPTS -->
+        <script src="/static/assets/global/scripts/app.min.js" type="text/javascript"></script>
+        <!-- END THEME GLOBAL SCRIPTS -->
+        <!-- BEGIN PAGE LEVEL SCRIPTS -->
+        
+        <!-- END PAGE LEVEL SCRIPTS -->
+        <!-- BEGIN THEME LAYOUT SCRIPTS -->
+        <script src="/static/assets/layouts/layout5/scripts/layout.min.js" type="text/javascript"></script>
+        <script src="/static/assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
+{% endblock %}

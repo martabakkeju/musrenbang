@@ -1,0 +1,466 @@
+{{form.errors}}
+<div class="form-body">
+	<div class="form-group form-md-line-input form-md-floating-label has-successs">
+		{{form.username}}
+		<label for="form_control_1">Username</label>
+		<span class="help-block">Username</span>
+
+	</div>
+
+	<div class="form-group form-md-line-input form-md-floating-label has-successs">
+		{{form.password}}
+		<label for="form_control_1">Password</label>
+		<span class="help-block">Password</span>
+	</div>
+	<div class="form-group form-md-line-input form-md-floating-label has-successs">
+		{{form.email}}
+		<label for="form_control_1">Email</label>
+		<span class="help-block">Email</span>
+	</div>
+
+
+	<div class="form-group form-md-line-input form-md-floating-label has-successs">
+		{{form.tipe}}
+		<label for="form_control_1"><center>Tipe</center></label>
+		<span class="help-block"><center>Tipe</center></span>
+	</div>
+
+
+	
+	<div class="form-group form-md-line-input form-md-floating-label has-success">
+		<input type="text" class="form-control" name="{{form.full_name.name}}" value="{{detailuser.full_name}}" >
+		<label for="form_control_1">Nama Lengkap</label>
+		<span class="help-block">Nama Lengkap</span>
+	</div>
+
+	<div class="form-group form-md-line-input has-success">
+		<script type="text/javascript">
+
+			jQuery(document).ready(function($)
+			{
+				$("#input{{form.kecamatan.name}}").select2({
+					minimumInputLength: 1,
+					initSelection: function(element, callback){
+						jQuery.ajax("/service/kecamatan/", {
+							data:{
+								limit: -1,
+								q: 1,
+								key_name:'name',
+								fields:['id']
+							},
+							dataType: "json"
+							}).done(function(data) { 
+								callback(data.items[0]);
+							}
+						);
+					},
+				   
+					ajax: {
+						url: "/service/kecamatan/",
+						dataType: 'json',
+						quietMillis: 100,
+						data: function(term, page) {
+							return {
+								limit: -1,
+								q: term,
+
+							};
+						},
+						results: function(data, page ) {
+							return { results: data.items }
+						}
+					},
+					formatResult: function(data) { 
+						return "<div class='select2-user-result'>" + data.name + "</div>"; 
+					},
+					formatSelection: function(data) { 
+						return  data.name; 
+					}
+					
+				});
+			});
+		</script>
+		<input type="text" class="form-control" readonly='true' name="{{form.kecamatan.name}}" id="input{{form.kecamatan.name}}" value="1" >
+		<label for="form_control_1">Kecamatan</label>
+	</div>
+	<div id="isi_tipe"></div>
+	
+	 <div class="form-group form-md-line-input form-md-floating-label has-successs">
+		{{form.is_staff}}
+		<label for="form_control_1"><center>Staff</center></label>
+		<span class="help-block"><center>Staff</center></span>
+	</div>
+
+	<div class="form-group form-md-line-input form-md-floating-label has-successs">
+		{{form.is_active}}
+		<label for="form_control_1"><center>Active</center></label>
+		<span class="help-block"><center>Active</center></span>
+	</div>
+</div>
+<div class="form-actions">
+	<div class="row">
+		<div class="col-md-12">
+			<button type="submit" class="btn dark">Submit</button>
+			<!-- <a type="submit" class="btn dark">Submit</a> -->
+			<a href="{{request.META.HTTP_REFERER}}" class="btn default">Cancel</a>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+<script>
+ jQuery(document).ready(function($) {
+ 	 if($('#tipe').val()=="kelurahan"){
+		$('#isi_tipe').html('<div class="form-group form-md-line-input has-success"> <input type="text" class="form-control"  name="{{form.kelurahan.name}}" id="input{{form.kelurahan.name}}" > <label for="form_control_1">Kelurahan</label> </div> ')
+
+		$("#input{{form.kelurahan.name}}").select2({minimumInputLength: 1,initSelection: function(element, callback){
+						jQuery.ajax("/service/kelurahan/", {
+							data:{
+								limit: -1,
+								q: {{form.kelurahan.value}},
+								key_name:'name',
+								fields:['id']
+							},
+							dataType: "json"
+							}).done(function(data) { 
+								callback(data.items[0]);
+							}
+						);
+					}, ajax: {url: "/service/kelurahan/", dataType: "json", quietMillis: 100, data: function(term, page) {return {limit: -1, q: term, }; }, results: function(data, page ) {return { results: data.items } } }, formatResult: function(data) {return "<div class='select2-user-result'>" + data.name + "</div>"; }, formatSelection: function(data) {return  data.name; } }); 
+
+		  }
+
+		else if ($('#tipe').val()=="kecamatan"){
+				$('#isi_tipe').html("")
+			}
+		else if($('#tipe').val()=="rw") {
+ 			$('#isi_tipe').html('<div class="form-group form-md-line-input has-success"> <input type="text" class="form-control"  name="{{form.rw.name}}" id="input{{form.rw.name}}" value="{{ form.rw.value }}"> <label for="form_control_1">Rw</label>  </div>')
+
+ 			$("#input{{form.rw.name}}").select2({
+					minimumInputLength: 1,
+					initSelection: function(element, callback){
+						jQuery.ajax("/service/rw/", {
+							data:{
+								limit: -1,
+								q: {{form.rw.value}},
+								key_name:'name',
+								fields:['id']
+							},
+							dataType: "json"
+							}).done(function(data) { 
+								callback(data.items[0]);
+							}
+						);
+					},
+				   
+					ajax: {
+						url: "/service/rw/",
+						dataType: 'json',
+						quietMillis: 100,
+
+						data: function(term, page) {
+							return {
+								limit: -1,
+								q: term,
+								extra_fields:['kelurahan.name','kelurahan.kecamatan.name']
+							};
+						},
+						results: function(data, page ) {
+							return { results: data.items }
+						}
+					},
+					formatResult: function(data) { 
+						return "<div class='select2-user-result'>"+'rw ' + data.name+' Kelurahan '+data.extra_fields['kelurahan.name']+ "</div>"; 
+					},
+					formatSelection: function(data) { 
+						return  'rw ' + data.name+' Kelurahan '+data.extra_fields['kelurahan.name']; 
+					}
+					
+				});
+		}
+		else if($('#tipe').val()=="lpm") {
+			$('#isi_tipe').html(' <div class="form-group form-md-line-input has-success"> <input type="text" class="form-control"  name="{{form.lpm.name}}" id="input{{form.lpm.name}}" > <label for="form_control_1">LPM</label> </div>')		
+			$("#input{{form.lpm.name}}").select2({
+					minimumInputLength: 1,
+					initSelection: function(element, callback){
+						jQuery.ajax("/service/lpm/", {
+							data:{
+								limit: -1,
+								q: {{form.lpm.value}},
+								key_name:'name',
+								fields:['id']
+							},
+							dataType: "json"
+							}).done(function(data) { 
+								callback(data.items[0]);
+							}
+						);
+					},
+				   
+					ajax: {
+						url: "/service/lpm/",
+						dataType: 'json',
+						quietMillis: 100,
+						data: function(term, page) {
+							return {
+								limit: -1,
+								q: term,
+								extra_fields:['rw.name','rw.kelurahan.name']
+
+							};
+						},
+						results: function(data, page ) {
+							return { results: data.items }
+						}
+					},
+					formatResult: function(data) { 
+						return "<div class='select2-user-result'>" + data.name +' Rw '+data.extra_fields['rw.name']+' kelurahan '+data.extra_fields['rw.kelurahan.name']+"</div>"; 
+					},
+					formatSelection: function(data) { 
+						return   data.name +' Rw '+data.extra_fields['rw.name']+' kelurahan '+data.extra_fields['rw.kelurahan.name']; 
+					}
+					
+				});	
+		}
+		else if($('#tipe').val()=="karangtaruna") {
+			$('#isi_tipe').html('<div class="form-group form-md-line-input has-success"> <input type="text" class="form-control"  name="{{form.karangtaruna.name}}" id="input{{form.karangtaruna.name}}" > <label for="form_control_1">Karang Taruna</label> </div>')
+
+			$("#input{{form.karangtaruna.name}}").select2({
+					minimumInputLength: 1,
+					initSelection: function(element, callback){
+						jQuery.ajax("/service/karangtaruna/", {
+							data:{
+								limit: -1,
+								q: {{form.karangtaruna.value}},
+								key_name:'name',
+								fields:['id']
+							},
+							dataType: "json"
+							}).done(function(data) { 
+								callback(data.items[0]);
+							}
+						);
+					},
+				   
+					ajax: {
+						url: "/service/karangtaruna/",
+						dataType: 'json',
+						quietMillis: 100,
+						data: function(term, page) {
+							return {
+								limit: -1,
+								q: term,
+								extra_fields:['rw.name','rw.kelurahan.name']
+
+							};
+						},
+						results: function(data, page ) {
+							return { results: data.items }
+						}
+					},
+					formatResult: function(data) { 
+						return "<div class='select2-user-result'>" + data.name +' Rw '+data.extra_fields['rw.name']+' kelurahan '+data.extra_fields['rw.kelurahan.name'] + "</div>"; 
+					},
+					formatSelection: function(data) { 
+						return  data.name +' Rw '+data.extra_fields['rw.name']+' kelurahan '+data.extra_fields['rw.kelurahan.name']; 
+					}
+					
+				});
+		}
+		else if($('#tipe').val()=="pkk") {
+			$('#isi_tipe').html('<div class="form-group form-md-line-input has-success"> <input type="text" class="form-control"  name="{{form.pkk.name}}" id="input{{form.pkk.name}}" > <label for="form_control_1">PKK</label> </div>')
+
+			$("#input{{form.pkk.name}}").select2({
+					minimumInputLength: 1,
+					initSelection: function(element, callback){
+						jQuery.ajax("/service/pkk/", {
+							data:{
+								limit: -1,
+								q: {{form.pkk.value}},
+								key_name:'name',
+								fields:['id']
+							},
+							dataType: "json"
+							}).done(function(data) { 
+								callback(data.items[0]);
+							}
+						);
+					},
+				   
+					ajax: {
+						url: "/service/pkk/",
+						dataType: 'json',
+						quietMillis: 100,
+						data: function(term, page) {
+							return {
+								limit: -1,
+								q: term,
+								extra_fields:['rw.name','rw.kelurahan.name']
+
+							};
+						},
+						results: function(data, page ) {
+							return { results: data.items }
+						}
+					},
+					formatResult: function(data) { 
+						return "<div class='select2-user-result'>" + data.name +' Rw '+data.extra_fields['rw.name']+' kelurahan '+data.extra_fields['rw.kelurahan.name']+ "</div>"; 
+					},
+					formatSelection: function(data) { 
+						return  data.name +' Rw '+data.extra_fields['rw.name']+' kelurahan '+data.extra_fields['rw.kelurahan.name']; 
+					}
+					
+				});
+		}
+
+
+
+	$( "#tipe" ).change(function() {
+  
+	  if($('#tipe').val()=="kelurahan"){
+		$('#isi_tipe').html('<div class="form-group form-md-line-input has-success"> <input type="text" class="form-control"  name="{{form.kelurahan.name}}" id="input{{form.kelurahan.name}}" > <label for="form_control_1">Kelurahan</label> </div> ')
+
+		$("#input{{form.kelurahan.name}}").select2({minimumInputLength: 1, ajax: {url: "/service/kelurahan/", dataType: "json", quietMillis: 100, data: function(term, page) {return {limit: -1, q: term, }; }, results: function(data, page ) {return { results: data.items } } }, formatResult: function(data) {return "<div class='select2-user-result'>" + data.name + "</div>"; }, formatSelection: function(data) {return  data.name; } }); 
+
+		  }
+
+		else if ($('#tipe').val()=="kecamatan"){
+				$('#isi_tipe').html("")
+			}
+		else if($('#tipe').val()=="rw") {
+ 			$('#isi_tipe').html('<div class="form-group form-md-line-input has-success"> <input type="text" class="form-control"  name="{{form.rw.name}}" id="input{{form.rw.name}}" value="{{ form.rw.value }}"> <label for="form_control_1">Rw</label>  </div>')
+
+ 			$("#input{{form.rw.name}}").select2({
+					minimumInputLength: 1,
+				   
+					ajax: {
+						url: "/service/rw/",
+						dataType: 'json',
+						quietMillis: 100,
+						data: function(term, page) {
+							return {
+								limit: -1,
+								q: term,
+								extra_fields:['kelurahan.name']
+							};
+						},
+						results: function(data, page ) {
+							return { results: data.items }
+						}
+					},
+					formatResult: function(data) { 
+						return "<div class='select2-user-result'>"+'rw ' + data.name+' Kelurahan '+data.extra_fields['kelurahan.name']+ "</div>"; 
+					},
+					formatSelection: function(data) { 
+						return  'rw ' + data.name+' Kelurahan '+data.extra_fields['kelurahan.name']; 
+					}
+					
+				});
+		}
+		else if($('#tipe').val()=="lpm") {
+			$('#isi_tipe').html(' <div class="form-group form-md-line-input has-success"> <input type="text" class="form-control"  name="{{form.lpm.name}}" id="input{{form.lpm.name}}" > <label for="form_control_1">LPM</label> </div>')		
+			$("#input{{form.lpm.name}}").select2({
+					minimumInputLength: 1,
+				   
+					ajax: {
+						url: "/service/lpm/",
+						dataType: 'json',
+						quietMillis: 100,
+						data: function(term, page) {
+							return {
+								limit: -1,
+								q: term,
+								extra_fields:['kelurahan.name']
+
+							};
+						},
+						results: function(data, page ) {
+							return { results: data.items }
+						}
+					},
+					formatResult: function(data) { 
+						return "<div class='select2-user-result'>" + data.name +' Kelurahan '+data.extra_fields['kelurahan.name']+"</div>"; 
+					},
+					formatSelection: function(data) { 
+						return   data.name +' Kelurahan '+data.extra_fields['kelurahan.name']; 
+					}
+					
+				});	
+		}
+		else if($('#tipe').val()=="karangtaruna") {
+			$('#isi_tipe').html('<div class="form-group form-md-line-input has-success"> <input type="text" class="form-control"  name="{{form.karangtaruna.name}}" id="input{{form.karangtaruna.name}}" > <label for="form_control_1">Karang Taruna</label> </div>')
+
+			$("#input{{form.karangtaruna.name}}").select2({
+					minimumInputLength: 1,
+				   
+					ajax: {
+						url: "/service/karangtaruna/",
+						dataType: 'json',
+						quietMillis: 100,
+						data: function(term, page) {
+							return {
+								limit: -1,
+								q: term,
+								extra_fields:['kelurahan.name']
+
+							};
+						},
+						results: function(data, page ) {
+							return { results: data.items }
+						}
+					},
+					formatResult: function(data) { 
+						return "<div class='select2-user-result'>" + data.name +' Kelurahan '+data.extra_fields['kelurahan.name'] + "</div>"; 
+					},
+					formatSelection: function(data) { 
+						return  data.name +' Kelurahan '+data.extra_fields['kelurahan.name']; 
+					}
+					
+				});
+		}
+		else if($('#tipe').val()=="pkk") {
+			$('#isi_tipe').html('<div class="form-group form-md-line-input has-success"> <input type="text" class="form-control"  name="{{form.pkk.name}}" id="input{{form.pkk.name}}" > <label for="form_control_1">PKK</label> </div>')
+
+			$("#input{{form.pkk.name}}").select2({
+					minimumInputLength: 1,
+				   
+					ajax: {
+						url: "/service/pkk/",
+						dataType: 'json',
+						quietMillis: 100,
+						data: function(term, page) {
+							return {
+								limit: -1,
+								q: term,
+								extra_fields:['kelurahan.name']
+
+							};
+						},
+						results: function(data, page ) {
+							return { results: data.items }
+						}
+					},
+					formatResult: function(data) { 
+						return "<div class='select2-user-result'>" + data.name +' Kelurahan '+data.extra_fields['kelurahan.name']+ "</div>"; 
+					},
+					formatSelection: function(data) { 
+						return  data.name +' Kelurahan '+data.extra_fields['kelurahan.name']; 
+					}
+					
+				});
+		}
+
+		// 
+	}) 
+
+
+
+
+ })
+
+  </script>
+

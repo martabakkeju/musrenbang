@@ -1,0 +1,187 @@
+{{form.errors}}
+<div class="form-body">
+    
+    <div class="form-group form-md-line-input has-success">
+        <label for="form_control_1">Waktu</label>
+            <div class="input-group date form_datetime">
+                <input type="text" size="16" readonly class="form-control" name="{{form.waktu.name}}">
+                <span class="input-group-btn">
+                    <button class="btn default date-set" type="button">
+                        <i class="fa fa-calendar"></i>
+                    </button>
+                </span>
+            </div>
+    </div>
+
+    <div class="form-group form-md-line-input has-success">
+        <script type="text/javascript">
+
+            jQuery(document).ready(function($)
+            {
+                $("#input{{form.kecamatan.name}}").select2({
+                    minimumInputLength: 1,
+                    {% if not request.path == '/agenda/add/' %}
+                    initSelection: function(element, callback){
+                        jQuery.ajax("/service/kecamatan", {
+                            data:{
+                                limit: -1,
+                                q: {{ form.kecamatan.value }},
+                                fields:['id']
+                            },
+                            dataType: "json"
+                            }).done(function(data) { 
+                                callback(data.items[0]);
+                            }
+                        );
+                    },
+                    {% endif %}
+                    ajax: {
+                        url: "/service/kecamatan/",
+                        dataType: 'json',
+                        quietMillis: 100,
+                        data: function(term, page) {
+                            return {
+                                limit: -1,
+                                q: term,
+
+                            };
+                        },
+                        results: function(data, page ) {
+                            return { results: data.items }
+                        }
+                    },
+                    formatResult: function(data) { 
+                        return "<div class='select2-user-result'>" + data.name + "</div>"; 
+                    },
+                    formatSelection: function(data) { 
+                        return  data.name; 
+                    }
+                    
+                });
+            });
+        </script>
+        <input type="text" class="form-control"  name="{{form.kecamatan.name}}" id="input{{form.kecamatan.name}}" {% if kelurahan.kecamatan %} value="{{ form.kecamatan.value }}" {% endif %}>
+        <label for="form_control_1">Kecamatan</label>
+    </div>
+    <div class="form-group form-md-line-input has-success">
+        <script type="text/javascript">
+
+            jQuery(document).ready(function($)
+            {
+                $("#input{{form.kelurahan.name}}").select2({
+                    minimumInputLength: 1,
+                    {% if not request.path == '/agenda/add/' %}
+                    initSelection: function(element, callback){
+                        jQuery.ajax("/service/kelurahan", {
+                            data:{
+                                limit: -1,
+                                q: {{ form.kelurahan.value }},
+                                fields:['id']
+                            },
+                            dataType: "json"
+                            }).done(function(data) { 
+                                callback(data.items[0]);
+                            }
+                        );
+                    },
+                    {% endif %}
+                    ajax: {
+                        url: "/service/kelurahan/",
+                        dataType: 'json',
+                        quietMillis: 100,
+                        data: function(term, page) {
+                            return {
+                                limit: -1,
+                                q: term,
+
+                            };
+                        },
+                        results: function(data, page ) {
+                            return { results: data.items }
+                        }
+                    },
+                    formatResult: function(data) { 
+                        return "<div class='select2-user-result'>" + data.name + "</div>"; 
+                    },
+                    formatSelection: function(data) { 
+                        return  data.name; 
+                    }
+                    
+                });
+            });
+        </script>
+        <input type="text" class="form-control"  name="{{form.kelurahan.name}}" id="input{{form.kelurahan.name}}" {% if rw.kelurahan %} value="{{form.kelurahan.value}}" {% endif %}>
+        <label for="form_control_1">Kelurahan</label>
+    </div>
+    <div class="form-group form-md-line-input has-success">
+        <script type="text/javascript">
+
+            jQuery(document).ready(function($)
+            {
+                $("#input{{form.rw.name}}").select2({
+                    minimumInputLength: 1,
+                    {% if not request.path == '/agenda/add/' %}
+                    initSelection: function(element, callback){
+                        jQuery.ajax("/service/rw", {
+                            data:{
+                                limit: -1,
+                                q: {{ form.rw.value }},
+                                fields:['id']
+                            },
+                            dataType: "json"
+                            }).done(function(data) { 
+                                callback(data.items[0]);
+                            }
+                        );
+                    },
+                    {% endif %}
+                    ajax: {
+                        url: "/service/rw/",
+                        dataType: 'json',
+                        quietMillis: 100,
+                        data: function(term, page) {
+                            return {
+                                limit: -1,
+                                q: term,
+
+                            };
+                        },
+                        results: function(data, page ) {
+                            return { results: data.items }
+                        }
+                    },
+                    formatResult: function(data) { 
+                        return "<div class='select2-user-result'>" + data.name + "</div>"; 
+                    },
+                    formatSelection: function(data) { 
+                        return  data.name; 
+                    }
+                    
+                });
+            });
+        </script>
+        <input type="text" class="form-control"  name="{{form.rw.name}}" id="input{{form.rw.name}}" {% if pkk.rw %} value="{{ form.rw.value }}" {% endif %}>
+        <label for="form_control_1">Rw</label>
+    </div>
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <textarea class="form-control" id="input{{ form.keterangan.name }}" name="{{ form.keterangan.name }}" rows="3">{{agenda.keterangan}}</textarea>
+        <label for="form_control_1">Keterangan</label>
+        <span class="help-block">Keterangan</span>
+    </div>
+
+</div>
+
+<div class="form-actions">
+    <div class="row">
+        <div class="col-md-12">
+            <button type="submit" class="btn dark">Submit</button>
+            <!-- <a href="javascript:;" class="btn dark">Submit</a> -->
+            <a href="{{request.META.HTTP_REFERER}}" class="btn default">Cancel</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+

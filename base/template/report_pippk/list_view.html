@@ -1,0 +1,54 @@
+<!-- BEGIN EXAMPLE TABLE PORTLET-->
+<div class="portlet light bordered">
+	<div class="portlet-title"> 
+		
+		<div class="caption font-dark">
+			<i class="icon-settings font-dark"></i>
+			<span class="caption-subject bold uppercase">Tabel Pippk</span><br/><br/>
+			
+		</div>
+
+		<div class="tools"> </div>
+	</div>
+
+	<div class="portlet-body">
+		<table class="table table-striped table-bordered table-hover" cellspacing="0" width="80%" id="sample_1">
+			<thead>
+				<tr>
+					<th> Kelurahan </th>
+					<th> Bagian </th>
+					<th> Kegiatan </th>
+					<th> Sasaran </th>
+					<th> Volume </th>
+					<th> Usulan Pagu </th>
+					<th> Status </th>
+					<th> Alasan </th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for i in object_list %}
+				<tr>
+					<td> {{i.rw.kelurahan|default_if_none:"-"}} </td>
+					<td> 
+					{% if i.rw %}
+						Rw {{i.rw}}
+					{% elif i.lpm %}
+						{{i.lpm}}
+					{% elif i.pkk %}
+						{{i.pkk}}
+					{% elif i.karangtaruna %}
+						{{i.karangtaruna}}
+					{% endif %}
+					</td>
+					<td> {{i.kegiatan}} </td>
+					<td> {{i.sasaran}}</td>
+					<td> {{i.volume}} </td>
+					<td>{{i.usulan}}</td>
+					<td> {{i.status}} </td>
+					<td> {{i.alasan|default_if_none:"-"}} </td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>

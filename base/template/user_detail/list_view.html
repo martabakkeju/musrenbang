@@ -1,0 +1,49 @@
+<!-- BEGIN EXAMPLE TABLE PORTLET-->
+<div class="portlet light bordered">
+	<div class="portlet-title"> 
+		<a href="{% url 'DetailUserAdd' %}" class="btn btn-circle blue" style="float: right;">Tambah</a>	
+		<div class="caption font-dark">
+			<i class="icon-settings font-dark"></i>
+			<span class="caption-subject bold uppercase">Tabel User</span><br/><br/>
+			
+		</div>
+
+		<div class="tools"> </div>
+	</div>
+
+	<div class="portlet-body">
+		<table class="table table-striped table-bordered " id="sample_3">
+			<thead>
+				<tr>
+					<th> Login </th>
+					<th> Nama Lengkap </th>
+					<th> Group </th>
+					<th> Tipe</th>
+					<th> Kecamatan</th>
+					<th> Kelurahan</th>
+					<th> Rw</th>
+					<th> Organisasi</th>
+					<th width="190 px" class="dontprint"> Actions </th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for i in object_list %}
+				<tr>
+					<td>{{i.user.username}}</td>
+					<td>{{i.full_name}}</td>
+					<td>{{i.user.groups.all.0}}</td>
+					<td>{{i.tipe}}</td>
+					<td>{{i.kecamatan}}</td>
+					<td>{{i.kelurahan|default_if_none:"-"}}</td>
+					<td>{{i.rw|default_if_none:"-"}}</td>
+					<td>{{i.lpm|default_if_none:""}}{{i.pkk|default_if_none:""}}{{i.karangtaruna|default_if_none:""}}</td>
+					<td class="dontprint">
+						<a href="{% url 'DetailUserUpdate' i.id %}" class="btn btn-circle green">Perbarui</a> 
+						<a href="{% url 'DetailUserDelete' i.id %}" class="btn btn-circle red">Hapus</a>
+					</td>
+				</tr>
+				{% endfor %}				
+			</tbody>
+		</table>
+	</div>
+</div>
