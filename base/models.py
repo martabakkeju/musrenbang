@@ -6,6 +6,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.auth.models import Group
 from django.core.exceptions import ValidationError
+import datetime
+from django.utils.translation import gettext as _
+from django.core.validators import MaxValueValidator
 
 # Create your models here.
 class Kecamatan(models.Model):
@@ -225,11 +228,16 @@ class Musrenbang(models.Model):
 		('belum di akomodir', 'Belum Di Akomodir'),
 		('di tolak', 'Di Tolak'),
 	)
+
 	status = models.CharField(choices=STATUS, default='belum', max_length=19)
 	skpdtujuan = models.ForeignKey('SkpdTujuan', on_delete=models.PROTECT)
 	lokasi = models.CharField(max_length=50)
 	# foto_kegiatan = models.ImageField(null=True, blank=True, upload_to='foto/')
 	alasan = models.CharField(max_length=300, blank=True, null= True)
+	year_dropdown = []
+	for y in range(2011, (datetime.datetime.now().year + 5)):
+		year_dropdown.append((y, y))
+	waktu = models.IntegerField(_('year'), max_length=4, choices=year_dropdown, default=datetime.datetime.now().year)	
 
 	def is_data_consistent(self):
 
@@ -262,8 +270,9 @@ class MusrenbangTolakForm(ModelForm):
 class MusrenbangForm(ModelForm):
 	class Meta:
 		model = Musrenbang
-		fields = ['usulan','urusan', 'bidang', 'prioritasdaerah', 'sasarandaerah', 'program', 'kegiatan', 'sasaran', 'volume', 'skpdtujuan','lokasi', 'alasan', 'tipe']
+		fields = ['waktu', 'usulan', 'urusan', 'bidang', 'prioritasdaerah', 'sasarandaerah', 'program', 'kegiatan', 'sasaran', 'volume', 'skpdtujuan','lokasi', 'alasan', 'tipe']
 		widgets = {
+			'waktu': forms.Select(attrs={'id':'waktu', 'class': 'form-control', 'data-validate': 'required', 'data-message-required': 'Please Input Tipe'}),
 			'urusan': forms.Select(attrs={'id':'urusan', 'class': 'form-control', 'data-validate': 'required', 'data-message-required': 'Please Input Tipe'}),
 			'bidang': forms.Select(attrs={'id':'bidang', 'class': 'form-control', 'data-validate': 'required', 'data-message-required': 'Please Input Tipe'}),
 			'prioritasdaerah': forms.Select(attrs={'id':'prioritasdaerah', 'class': 'form-control', 'data-validate': 'required', 'data-message-required': 'Please Input Tipe'}),
@@ -273,7 +282,7 @@ class MusrenbangForm(ModelForm):
 			'skpdtujuan': forms.Select(attrs={'id':'urusan', 'class': 'form-control', 'data-validate': 'required', 'data-message-required': 'Please Input Tipe'}),
 		}
 class MusrenbangAdmin(admin.ModelAdmin):
-	list_display = ('urusan', 'bidang', 'prioritasdaerah', 'sasarandaerah', 'program', 'kegiatan', 'sasaran', 'volume','status', 'skpdtujuan', 'alasan', 'lokasi', 'usulan')
+	list_display = ('waktu', 'urusan', 'bidang', 'prioritasdaerah', 'sasarandaerah', 'program', 'kegiatan', 'sasaran', 'volume','status', 'skpdtujuan', 'alasan', 'lokasi', 'usulan')
 
 class Pippk(models.Model):
 	TIPE = (
@@ -558,7 +567,22 @@ class DetailUserForm(ModelForm):
 			'tipe': forms.Select(attrs={'id':'tipe', 'class': 'form-control', 'data-validate': 'required', 'data-message-required': 'Please Input Tipe'}),
 		}
 
+class PelaksanaanMusrenbang(models.Model):
+	musrenbang = models.ForeignKey(Musrenbang, on_delete=models.CASCADE)
+	pelaksaaan = models.DateTimeField(auto_now_add=True)
+	laporan_kegiatan = models.IntegerField(validators=[MaxValueValidator(100)])
 
+	def __unicode__(self):
+		return self.musrenbang.kegiatan
+
+class PelaksanaanPippk(models.Model):
+	pippk = models.ForeignKey(Pippk, on_delete=models.CASCADE)
+	pelaksaaan = models.DateTimeField(auto_now_add=True)
+	laporan_kegiatan = models.IntegerField(validators=[MaxValueValidator(100)])
+
+	def __unicode__(self):
+		return self.musrenbang.kegiatan
+	
 	
 
 

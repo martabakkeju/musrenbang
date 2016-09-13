@@ -452,10 +452,10 @@ class MusrenbangUpdateView(UpdateView):
 	form_class = MusrenbangForm
 	template_name = 'musrenbang/_update.html'
 
-	def get(self, request):
+	def get(self, request, **kwargs):
 		try:
 			if str(request.user.groups.all()[0]) in ['musrenbang', 'pippk'] :
-				return super(MusrenbangCreateView, self).get(request)
+				return super(MusrenbangUpdateView, self).get(request)
 			else:
 				return redirect(reverse('Dashboard'))
 		except:
@@ -832,4 +832,5 @@ class ServiceList(View):
 # 			context = {}
 # 			template = "content/login.html"
 # 			return render (request, template, context)
+
 
