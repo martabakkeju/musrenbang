@@ -616,6 +616,26 @@ class PippkDeleteView(DeleteView):
 	success_url = reverse_lazy('Pippk')
 	template_name = 'pippk/_delete.html'
 
+# Pelaksanaan Musrenbang
+#class PelaksanaanMusrenbangCreateView(BaseCreateSetting):
+#	form_class = PelaksanaanMusrenbangForm
+#	template_name = 'pelaksanaan_musrenbang/_create.html'
+
+#class PelaksanaanMusrenbangUpdateView(BaseUpdateSetting):
+#	model = PelaksanaanMusrenbang
+#	form_class = PelaksanaanMusrenbangForm
+#	template_name = 'pelaksanaan_musrenbang/_update.html'
+
+# Pelaksanaan Pippk
+#class PelaksanaanPippkCreateView(BaseCreateSetting):
+#	form_class = PelaksanaanPippkForm
+#	template_name = 'pelaksanaan_pippk/_create.html'
+
+#class PelaksanaanPippkUpdateView(BaseUpdateSetting):
+#	model = PelaksanaanPippk
+#	form_class = PelaksanaanPippkForm
+#	template_name = 'pelaksanaan_pippk/_update.html'
+
 # Saran
 class SaranList(ListView):
 	template_name = "saran/index.html"

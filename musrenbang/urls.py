@@ -114,6 +114,20 @@ urlpatterns = [
     url(r'^pippk/update/(?P<pk>\d+)/$', PippkUpdateView.as_view(), name="PippkUpdate"),
     url(r'^pippk/tolak/(?P<pk>\d+)/$', PippkTolakView.as_view(), name="PippkTolak"),
 
+    # url(r'^pelaksanaan-musrenbang/$', PelaksanaanMusrenbangList.as_view(), name="PelaksanaanMusrenbang"),
+    # url(r'^pelaksanaan-musrenbang/add/$', PelaksanaanMusrenbangCreateView.as_view(), name="PelaksanaanMusrenbangAdd"),
+    # url(r'^pelaksanaan-musrenbang/(?P<pk>\d+)/$', PelaksanaanMusrenbangDetailView.as_view(), name="PelaksanaanMusrenbangDetail"),
+    # url(r'^pelaksanaan-musrenbang/delete/(?P<pk>\d+)/$', PelaksanaanMusrenbangDeleteView.as_view(), name="PelaksanaanMusrenbangDelete"),
+    # url(r'^pelaksanaan-musrenbang/update/(?P<pk>\d+)/$', PelaksanaanMusrenbangUpdateView.as_view(), name="PelaksanaanMusrenbangUpdate"),
+    # url(r'^pelaksanaan-musrenbang/tolak/(?P<pk>\d+)/$', PelaksanaanMusrenbangTolakView.as_view(), name="PelaksanaanMusrenbangTolak"),
+
+    # url(r'^pelaksanaan-pippk/$', PelaksanaanPippkList.as_view(), name="PelaksanaanPippk"),
+    # url(r'^pelaksanaan-pippk/add/$', PelaksanaanPippkCreateView.as_view(), name="PelaksanaanPippkAdd"),
+    # url(r'^pelaksanaan-pippk/(?P<pk>\d+)/$', PelaksanaanPippkDetailView.as_view(), name="PelaksanaanPippkDetail"),
+    # url(r'^pelaksanaan-pippk/delete/(?P<pk>\d+)/$', PelaksanaanPippkDeleteView.as_view(), name="PelaksanaanPippkDelete"),
+    # url(r'^pelaksanaan-pippk/update/(?P<pk>\d+)/$', PelaksanaanPippkUpdateView.as_view(), name="PelaksanaanPippkUpdate"),
+    # url(r'^pelaksanaan-pippk/tolak/(?P<pk>\d+)/$', PelaksanaanPippkTolakView.as_view(), name="PelaksanaanPippkTolak"),
+
     url(r'^saran/$', SaranList.as_view(), name="Saran"),
     url(r'^saran/add/$', SaranCreateView.as_view(), name="SaranAdd"),
     url(r'^saran/(?P<pk>\d+)/$', SaranDetailView.as_view(), name="SaranDetail"),
