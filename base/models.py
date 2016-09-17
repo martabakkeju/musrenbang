@@ -568,20 +568,20 @@ class DetailUserForm(ModelForm):
 		}
 
 class PelaksanaanMusrenbang(models.Model):
-	musrenbang = models.ForeignKey(Musrenbang, on_delete=models.CASCADE)
-	pelaksaaan = models.DateTimeField(auto_now_add=True)
+	musrenbang = models.OneToOneField(Musrenbang, related_name="pelaksaaanmusrenbang")
+	pelaksanaan = models.DateTimeField(auto_now_add=True)
 	laporan_kegiatan = models.IntegerField(validators=[MaxValueValidator(100)])
 
 	def __unicode__(self):
 		return self.musrenbang.kegiatan
 
 class PelaksanaanPippk(models.Model):
-	pippk = models.ForeignKey(Pippk, on_delete=models.CASCADE)
-	pelaksaaan = models.DateTimeField(auto_now_add=True)
+	pippk = models.OneToOneField(Pippk, related_name="pelaksaaanpippk")
+	pelaksanaan = models.DateTimeField(auto_now_add=True)
 	laporan_kegiatan = models.IntegerField(validators=[MaxValueValidator(100)])
 
 	def __unicode__(self):
-		return self.musrenbang.kegiatan
+		return self.pippk.kegiatan
 	
 	
 
