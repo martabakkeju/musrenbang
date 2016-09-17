@@ -63,9 +63,8 @@
 						{% endif %}
 						{% endif %}
 						<a href="{% url 'MusrenbangDetail' i.id %}" class="btn btn-circle yellow">Detail</a>
-						{% if request.user.is_superuser and i.status == 'di akomodir' %}
-							<a class="btn btn-circle blue" data-toggle="modal" href="#draggable">Foto Kegiatan</a>
-							<!--<a href="/pelaksanaan-musrenbang/add/?musrenbang={{i.id}} ">-->
+						{% if i.status == 'di akomodir' %}
+							<a href="/pelaksanaan-musrenbang/add/?musrenbang={{i.id}} " class="btn btn-circle blue">Kegiatan</a>
 						{% endif %}
 					</td>
 				</tr>

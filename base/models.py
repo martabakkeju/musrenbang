@@ -237,7 +237,7 @@ class Musrenbang(models.Model):
 	year_dropdown = []
 	for y in range(2011, (datetime.datetime.now().year + 5)):
 		year_dropdown.append((y, y))
-	waktu = models.IntegerField(_('year'), max_length=4, choices=year_dropdown, default=datetime.datetime.now().year)	
+	waktu = models.IntegerField(_('year'), choices=year_dropdown, default=datetime.datetime.now().year)	
 
 	def is_data_consistent(self):
 
@@ -568,22 +568,36 @@ class DetailUserForm(ModelForm):
 		}
 
 class PelaksanaanMusrenbang(models.Model):
-	musrenbang = models.OneToOneField(Musrenbang, related_name="pelaksaaanmusrenbang")
-	pelaksanaan = models.DateTimeField(auto_now_add=True)
+	musrenbang = models.OneToOneField(Musrenbang, related_name="pelaksanaanmusrenbang")
+	pelaksaaan = models.DateTimeField(auto_now_add=True)
 	laporan_kegiatan = models.IntegerField(validators=[MaxValueValidator(100)])
 
 	def __unicode__(self):
 		return self.musrenbang.kegiatan
 
+class PelaksanaanMusrenbangForm(ModelForm):
+	class Meta:
+		model = PelaksanaanMusrenbang
+		fields = ['musrenbang', 'laporan_kegiatan']
+
+class PelaksanaanMusrenbangAdmin(admin.ModelAdmin):
+	list_display = ('musrenbang', 'pelaksaaan', 'laporan_kegiatan')
+
 class PelaksanaanPippk(models.Model):
-	pippk = models.OneToOneField(Pippk, related_name="pelaksaaanpippk")
-	pelaksanaan = models.DateTimeField(auto_now_add=True)
+	pippk = models.OneToOneField(Pippk, related_name="pelaksanaanpippk")
+	pelaksaaan = models.DateTimeField(auto_now_add=True)
 	laporan_kegiatan = models.IntegerField(validators=[MaxValueValidator(100)])
 
 	def __unicode__(self):
 		return self.pippk.kegiatan
 	
-	
+class PelaksanaanPippkForm(ModelForm):
+	class Meta:
+		model = PelaksanaanPippk
+		fields = ['pippk', 'laporan_kegiatan']
+
+class PelaksanaanPippkAdmin(admin.ModelAdmin):
+	list_display = ('pippk', 'pelaksaaan', 'laporan_kegiatan')	
 
 
 
