@@ -45,6 +45,9 @@
 						{% endif %}
 						{% endif %}
 						<a href="{% url 'PippkDetail' i.id %}" class="btn btn-circle yellow">Detail</a>
+						{% if i.status == 'di akomodir' or request.user.is_superuser %}
+							<a href="/pelaksanaan-pippk/add/?pippk={{i.id}} " class="btn btn-circle blue">Kegiatan</a>
+						{% endif %}
 					</td>
 				</tr>
 				{% endfor %}

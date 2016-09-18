@@ -569,8 +569,10 @@ class DetailUserForm(ModelForm):
 
 class PelaksanaanMusrenbang(models.Model):
 	musrenbang = models.OneToOneField(Musrenbang, related_name="pelaksanaanmusrenbang")
-	pelaksaaan = models.DateTimeField(auto_now_add=True)
+	waktu_pelaksanaan = models.DateTimeField()
 	laporan_kegiatan = models.IntegerField(validators=[MaxValueValidator(100)])
+	keterangan_kegiatan = models.CharField(max_length=250, blank=True, null=True)
+	foto_kegiatan = models.ImageField(upload_to='musrenbang_img/%Y/%m/%d', blank=True, null=True)
 
 	def __unicode__(self):
 		return self.musrenbang.kegiatan
@@ -578,15 +580,17 @@ class PelaksanaanMusrenbang(models.Model):
 class PelaksanaanMusrenbangForm(ModelForm):
 	class Meta:
 		model = PelaksanaanMusrenbang
-		fields = ['musrenbang', 'laporan_kegiatan']
+		fields = ['musrenbang', 'waktu_pelaksanaan', 'laporan_kegiatan', 'keterangan_kegiatan', 'foto_kegiatan']
 
 class PelaksanaanMusrenbangAdmin(admin.ModelAdmin):
-	list_display = ('musrenbang', 'pelaksaaan', 'laporan_kegiatan')
+	list_display = ('musrenbang', 'waktu_pelaksanaan', 'laporan_kegiatan', 'keterangan_kegiatan', 'foto_kegiatan')
 
 class PelaksanaanPippk(models.Model):
 	pippk = models.OneToOneField(Pippk, related_name="pelaksanaanpippk")
-	pelaksaaan = models.DateTimeField(auto_now_add=True)
+	waktu_pelaksanaan = models.DateTimeField()
 	laporan_kegiatan = models.IntegerField(validators=[MaxValueValidator(100)])
+	keterangan_kegiatan = models.CharField(max_length=250, blank=True, null=True)
+	foto_kegiatan = models.ImageField(upload_to='pippk_img/%Y/%m/%d', blank=True, null=True)
 
 	def __unicode__(self):
 		return self.pippk.kegiatan
@@ -594,10 +598,10 @@ class PelaksanaanPippk(models.Model):
 class PelaksanaanPippkForm(ModelForm):
 	class Meta:
 		model = PelaksanaanPippk
-		fields = ['pippk', 'laporan_kegiatan']
+		fields = ['pippk', 'waktu_pelaksanaan', 'laporan_kegiatan', 'keterangan_kegiatan', 'foto_kegiatan']
 
 class PelaksanaanPippkAdmin(admin.ModelAdmin):
-	list_display = ('pippk', 'pelaksaaan', 'laporan_kegiatan')	
+	list_display = ('pippk', 'waktu_pelaksanaan', 'laporan_kegiatan', 'keterangan_kegiatan', 'foto_kegiatan')	
 
 
 

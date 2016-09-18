@@ -1,0 +1,51 @@
+{{form.errors}}
+<div class="form-body">
+    
+    <div class="form-group form-md-line-input has-success">
+        <label for="form_control_1">Pelaksanaan</label>
+            <div class="input-group date form_datetime">
+                <input type="text" size="16" readonly class="form-control" name="{{form.waktu_pelaksanaan.name}}">
+                <span class="input-group-btn">
+                    <button class="btn default date-set" type="button">
+                        <i class="fa fa-calendar"></i>
+                    </button>
+                </span>
+            </div>
+    </div>
+    
+    <input type="hidden" name="{{form.pippk.name}}" value="{{request.GET.pippk}}" >
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <input type="number" class="form-control" id="form_control_1" name="{{form.laporan_kegiatan.name}}" value="{{pelaksanaanpippk.laporan_kegiatan}}">
+        <label for="form_control_1">Persentase Kegiatan</label>
+        <span class="help-block">Persentase Kegiatan</span>
+    </div>
+
+    <div class="form-group form-md-line-input form-md-floating-label has-success">
+        <textarea class="form-control" id="input{{ form.keterangan_kegiatan.name }}" name="{{ form.keterangan_kegiatan.name }}" rows="3">{{pelaksanaanpippk.keterangan_kegiatan}}</textarea>
+        <label for="form_control_1">Keterangan</label>
+        <span class="help-block">Keterangan</span>
+    </div>
+    
+    <div>
+        <h4>Foto Kegiatan</h4>
+        <br>
+        {{form.foto_kegiatan}}
+    </div>
+
+</div>
+
+<div class="form-actions">
+    <div class="row">
+        <div class="col-md-12">
+            <button type="submit" class="btn dark">Submit</button>
+            <!-- <a href="javascript:;" class="btn dark">Submit</a> -->
+            <a href="{{request.META.HTTP_REFERER}}" class="btn default">Cancel</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+

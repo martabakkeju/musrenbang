@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-# from django.conf.urls.static import static
+from django.conf.urls.static import static
 from django.conf.urls import patterns
 from base import views as base_views
 from base.views import *
@@ -121,7 +121,7 @@ urlpatterns = [
     # url(r'^pelaksanaan-musrenbang/update/(?P<pk>\d+)/$', PelaksanaanMusrenbangUpdateView.as_view(), name="PelaksanaanMusrenbangUpdate"),
 
     # url(r'^pelaksanaan-pippk/$', PelaksanaanPippkList.as_view(), name="PelaksanaanPippk"),
-    # url(r'^pelaksanaan-pippk/add/$', PelaksanaanPippkCreateView.as_view(), name="PelaksanaanPippkAdd"),
+    url(r'^pelaksanaan-pippk/add/$', PelaksanaanPippkCreateView.as_view(), name="PelaksanaanPippkAdd"),
     # url(r'^pelaksanaan-pippk/(?P<pk>\d+)/$', PelaksanaanPippkDetailView.as_view(), name="PelaksanaanPippkDetail"),
     # url(r'^pelaksanaan-pippk/delete/(?P<pk>\d+)/$', PelaksanaanPippkDeleteView.as_view(), name="PelaksanaanPippkDelete"),
     # url(r'^pelaksanaan-pippk/update/(?P<pk>\d+)/$', PelaksanaanPippkUpdateView.as_view(), name="PelaksanaanPippkUpdate"),
@@ -152,6 +152,6 @@ urlpatterns += patterns('',
         (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
     )
 
-# if settings.DEBUG:
-#     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
