@@ -239,6 +239,8 @@ class Musrenbang(models.Model):
 		year_dropdown.append((y, y))
 	waktu = models.IntegerField(_('year'), choices=year_dropdown, default=datetime.datetime.now().year)	
 
+	def __unicode__(self):
+		return self.status
 	def is_data_consistent(self):
 
 		is_valid = True 
@@ -568,14 +570,34 @@ class DetailUserForm(ModelForm):
 		}
 
 class PelaksanaanMusrenbang(models.Model):
-	musrenbang = models.OneToOneField(Musrenbang, related_name="pelaksanaanmusrenbang")
+	musrenbang = models.ForeignKey(Musrenbang, related_name="pelaksanaanmusrenbang")
 	waktu_pelaksanaan = models.DateTimeField()
 	laporan_kegiatan = models.IntegerField(validators=[MaxValueValidator(100)])
 	keterangan_kegiatan = models.CharField(max_length=250, blank=True, null=True)
 	foto_kegiatan = models.ImageField(upload_to='musrenbang_img/%Y/%m/%d', blank=True, null=True)
 
 	def __unicode__(self):
-		return self.musrenbang.kegiatan
+		return self.keterangan_kegiatan
+
+	def is_data_consistent(self):
+
+		is_valid = True 
+		err_msgs = []
+		obj = PelaksanaanMusrenbang.objects.filter( musrenbang = self.musrenbang).order_by('laporan_kegiatan')
+		if obj :
+			if self.laporan_kegiatan <= obj[0].laporan_kegiatan :
+				err_msgs.append(ValidationError('Laporan kegiatan harus lebih dari sebelumnya ('+obj[0].laporan_kegiatan+' %)' )) 
+				is_valid = False 
+		if self.musrenbang.status != 'di akomodir':
+			err_msgs.append(ValidationError('Musrenbang harus di akomodir' )) 
+			is_valid = False 
+		return {'status':is_valid, "err_msgs":err_msgs}
+
+	def clean(self):
+		is_data_consistent = self.is_data_consistent()
+		if not is_data_consistent['status']:
+			raise ValidationError(is_data_consistent['err_msgs'])
+		return super(PelaksanaanMusrenbang, self).clean()
 
 class PelaksanaanMusrenbangForm(ModelForm):
 	class Meta:
@@ -586,14 +608,36 @@ class PelaksanaanMusrenbangAdmin(admin.ModelAdmin):
 	list_display = ('musrenbang', 'waktu_pelaksanaan', 'laporan_kegiatan', 'keterangan_kegiatan', 'foto_kegiatan')
 
 class PelaksanaanPippk(models.Model):
-	pippk = models.OneToOneField(Pippk, related_name="pelaksanaanpippk")
+	pippk = models.ForeignKey(Pippk, related_name="pelaksanaanpippk")
 	waktu_pelaksanaan = models.DateTimeField()
 	laporan_kegiatan = models.IntegerField(validators=[MaxValueValidator(100)])
 	keterangan_kegiatan = models.CharField(max_length=250, blank=True, null=True)
 	foto_kegiatan = models.ImageField(upload_to='pippk_img/%Y/%m/%d', blank=True, null=True)
 
 	def __unicode__(self):
-		return self.pippk.kegiatan
+		return self.keterangan_kegiatan
+
+	def is_data_consistent(self):
+
+		is_valid = True 
+		err_msgs = []
+		obj = PelaksanaanPippk.objects.filter( pippk = self.pippk).order_by('laporan_kegiatan')
+		if obj :
+			if self.laporan_kegiatan <= obj[0].laporan_kegiatan :
+				err_msgs.append(ValidationError('Laporan kegiatan harus lebih dari sebelumnya ('+obj[0].laporan_kegiatan+' %)' )) 
+				is_valid = False 
+
+			if self.pippk.status != 'di akomodir':
+				err_msgs.append(ValidationError('Pippk harus di akomodir' )) 
+				is_valid = False 
+		return {'status':is_valid, "err_msgs":err_msgs}
+
+	def clean(self):
+		is_data_consistent = self.is_data_consistent()
+		if not is_data_consistent['status']:
+			raise ValidationError(is_data_consistent['err_msgs'])
+		return super(PelaksanaanPippk, self).clean()
+
 	
 class PelaksanaanPippkForm(ModelForm):
 	class Meta:

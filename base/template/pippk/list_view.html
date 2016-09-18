@@ -1,4 +1,5 @@
 <!-- BEGIN EXAMPLE TABLE PORTLET-->
+{% load humanize %}
 <div class="portlet light bordered">
 	<div class="portlet-title"> 
 		{% if request.user.groups.all.0.name == 'pippk' %}
@@ -32,7 +33,7 @@
 					<td> {{i.kegiatan}} </td>
 					<td> {{i.sasaran}}</td>
 					<td> {{i.volume}} </td>
-					<td> {{i.usulan}}</td>
+					<td> RP {{i.usulan | intcomma}}</td>
 					<td> {{i.status}} </td>
 					<td> {{i.alasan |default_if_none:"-"}} </td>
 					<td class="dontprint">
@@ -45,8 +46,8 @@
 						{% endif %}
 						{% endif %}
 						<a href="{% url 'PippkDetail' i.id %}" class="btn btn-circle yellow">Detail</a>
-						{% if i.status == 'di akomodir' or request.user.is_superuser %}
-							<a href="/pelaksanaan-pippk/add/?pippk={{i.id}} " class="btn btn-circle blue">Kegiatan</a>
+						{% if i.status == 'di akomodir' and request.user.is_superuser %}
+							<a href="/pelaksanaan-pippk/add/?pippk={{i.id}} " class="btn btn-circle blue">Pelaksanaan {{i.pelaksanaanpippk.all.0.laporan_kegiatan}}{% if not i.pelaksanaanpippk.all %} 0{% endif %}  %</a>
 						{% endif %}
 					</td>
 				</tr>

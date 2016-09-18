@@ -1,5 +1,5 @@
 {% extends "index.html" %}
-
+{% load humanize %}
 {% block header %}
 <meta charset="utf-8" />
 <title>SmartPlan | Musrenbang</title>
@@ -89,29 +89,7 @@
 <script src="/static/assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
 <!-- END THEME LAYOUT SCRIPTS -->
 <!-- <script src="/static/assets/pages/scripts/table-datatables-managed.js" type="text/javascript"></script> -->
- <script type="text/javascript">        
-    $(document).ready(function() {  
-    	$('#sample_1 thead th').each( function () {
-	        var title = $(this).text();
-	        $(this).html( '<input type="text" class="form-control input-sm input-small input-inline" placeholder="Search '+title+'" />' );
-	    } );
 
-        var table = $('#sample_1').DataTable();
-
-        // Apply the search
-	    table.columns().every( function () {
-	        var that = this;
-	 
-	        $( 'input', this.header() ).on( 'keyup change', function () {
-	            if ( that.search() !== this.value ) {
-	                that
-	                    .search( this.value )
-	                    .draw();
-	            }
-	        } );
-	    } );
-   }); // docs ready    
- </script>
 
 
 {% endblock %}

@@ -620,6 +620,7 @@ class PippkDeleteView(DeleteView):
 class PelaksanaanMusrenbangCreateView(CreateView):
 	form_class = PelaksanaanMusrenbangForm
 	template_name = 'pelaksanaan_musrenbang/_create.html'
+	success_url = reverse_lazy('Musrenbang')
 
 class PelaksanaanMusrenbangUpdateView(UpdateView):
 	model = PelaksanaanMusrenbang
@@ -630,11 +631,13 @@ class PelaksanaanMusrenbangUpdateView(UpdateView):
 class PelaksanaanPippkCreateView(CreateView):
 	form_class = PelaksanaanPippkForm
 	template_name = 'pelaksanaan_pippk/_create.html'
+	success_url = reverse_lazy('Pippk')
 
 class PelaksanaanPippkUpdateView(UpdateView):
 	model = PelaksanaanPippk
 	form_class = PelaksanaanPippkForm
 	template_name = 'pelaksanaan_pippk/_update.html'
+
 
 # Saran
 class SaranList(ListView):

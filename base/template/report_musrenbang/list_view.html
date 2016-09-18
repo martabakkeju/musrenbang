@@ -1,4 +1,5 @@
 <!-- BEGIN EXAMPLE TABLE PORTLET-->
+{% load humanize %}
 <div class="portlet light bordered">
 	<div class="portlet-title"> 
 		
@@ -23,7 +24,8 @@
 					<th> Usulan Pagu </th>
 					<th> SKPD Tujuan </th>
 					<th> Status </th>
-					<th> Alasan </th>
+					<th> Pelaksanaan</th>	
+					<th> Alasan Di Tolak </th>
 				</tr>
 			</thead>
 			<tbody>
@@ -34,9 +36,10 @@
 					<td> {{i.kegiatan}} </td>
 					<td> {{i.sasaran}}</td>
 					<td> {{i.volume}} </td>
-					<td>{{i.usulan}}</td>
+					<td>RP {{i.usulan | intcomma}}</td>
 					<td> {{i.skpdtujuan}} </td>
 					<td> {{i.status}} </td>
+					<td><center> {{i.pelaksanaanmusrenbang.all.0.laporan_kegiatan}}{% if not i.pelaksanaanmusrenbang.all %} 0{% endif %}  % </center></td>
 					<td> {{i.alasan|default_if_none:"-"}} </td>
 				</tr>
 				{% endfor %}
